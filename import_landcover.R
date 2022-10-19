@@ -30,15 +30,21 @@ import_landcover <- function(
 
 import_glaciers <- function(
     input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
-    output_name = "glaciers_chile") {
+    output_name = "glaciers_chile",
+    sql_query = "1=1",
+    min_area_m2 = 0.0001) {
   
   # glaciers from inventary
   execGRASS(
     cmd = "v.in.ogr",
     flags = c("overwrite", "r"),
     input = input_path_glaciers,
-    output = output_name
+    where = sql_query,
+    output = output_name,
+    min_area = min_area_m2
   )
+  
+  
   # create glacier raster
   execGRASS(
     cmd = "v.to.rast",

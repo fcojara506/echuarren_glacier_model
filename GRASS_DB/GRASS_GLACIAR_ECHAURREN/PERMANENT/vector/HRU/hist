@@ -1,3 +1,0 @@
-COMMAND: r.to.vect input="HRU" output="HRU" type="area" column="value"
-GISDBASE: /Users/fco/Documents/GitHub/echuarren_glacier_model/GRASS_DB
-LOCATION: GRASS_GLACIAR_ECHAURREN MAPSET: PERMANENT USER: fco DATE: Wed Oct 19 16:47:50 2022

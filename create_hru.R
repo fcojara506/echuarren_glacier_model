@@ -58,6 +58,8 @@ create_hru <- function(
             pattern = "HRU_t*")
   
   cat_HRU = execGRASS("r.category", map = output, intern = T)
+  #remove mask
+  execGRASS("r.mask", flags = "r")
   
   return(cat_HRU)
   

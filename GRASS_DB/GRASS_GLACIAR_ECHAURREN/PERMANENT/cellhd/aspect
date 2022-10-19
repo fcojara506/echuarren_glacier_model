@@ -1,11 +1,11 @@
 proj:       1
 zone:       -19
-north:      6287004.75
-south:      6279992.25
-east:       400008.25
-west:       391995.75
-cols:       641
-rows:       561
+north:      6287000
+south:      6280000
+east:       400000
+west:       392000
+cols:       640
+rows:       560
 e-w resol:  12.5
 n-s resol:  12.5
 format:     -1

@@ -1,4 +1,4 @@
-Wed Oct 19 16:47:10 2022
+Wed Oct 19 20:36:24 2022
 slope
 PERMANENT
 fco
@@ -10,6 +10,6 @@ slope map elev = dem_rect
 zfactor = 1.00 format = degrees
 min_slope = 0.000000
 
-r.slope.aspect elevation="dem_rect" slope="slope" aspect="aspect" fo\
-rmat="degrees" precision="FCELL" zscale=1.0 min_slope=0.0 nprocs=1 m\
-emory=300
+r.slope.aspect elevation="dem_rect" slope="slope" aspect="ccw_aspect\
+" format="degrees" precision="FCELL" zscale=1.0 min_slope=0.0 nprocs\
+=1 memory=300

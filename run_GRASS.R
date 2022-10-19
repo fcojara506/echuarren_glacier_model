@@ -6,6 +6,7 @@ source("region_extension.R")
 source("dem_operations.R")
 source("import_landcover.R")
 source("create_hru.R")
+source("raster_functions.R")
 
 #setting paths to start grass gis using R
 initialise_grass(empty_mapset = TRUE)
@@ -28,9 +29,16 @@ create_subbasin(
 #define watershed based on outlet coordinate
 delineate_watershed(watershed_name = "cuenca_echaurren",
                     outlet_coordinate = c(396350, 6282680))
-
 # compute slope and aspect (azimuth with respect N)
-compute_slope_aspect()
+compute_slope_aspect(input_dem = "dem_rect",
+                     slope = "slope",
+                     aspect = "aspect",
+                     aspect_4_directions = TRUE)
+# create elevation bands from dem
+elevation_bands(input_dem="dem_rect",
+                output_raster="bandas_elev_200m",
+                elevation_step=200,
+                minlevel=0)
 
 # create raster with buffer around streams
 buffer_streams(buffer_distance = 25,
@@ -44,7 +52,9 @@ import_landcover(input_path_landcover = "GIS/LandCover CHILE 2014/LC_CHILE_2014_
                  output_name = "landcover")
 
 # add elevation bands to glaciers
-
+raster_with_mask(raster = "glaciers_chile",
+                 mask = "cuenca_echaurren",
+                 output = "glaciers_echaurren")
 
 
 
