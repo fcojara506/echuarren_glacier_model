@@ -1,0 +1,57 @@
+import_landcover <- function(
+    input_path_landcover = "GIS/LandCover CHILE 2014/LC_CHILE_2014_b.tif",
+    output_name = "landcover") {
+  
+  # land use from ZHAO 2016
+  #https://www.sciencedirect.com/science/article/abs/pii/S0034425716302188?via%3Dihub
+  #http://www.gep.uchile.cl/Landcover/Landcover%20de%20Chile%20-%20Descripción%20del%20Producto%20-%20GEP%20UCHILE%202016.pdf
+  execGRASS(
+    cmd = "r.in.gdal",
+    flags = c("overwrite", "r"),
+    input = input_path_landcover,
+    output = "landcover_chile"
+  )
+  
+  # simplify categories within landcover chile
+  execGRASS(cmd = "r.mapcalc",
+            flags = "overwrite",
+            expression = paste0(output_name,"= round(landcover_chile/100)*100")
+            )
+  #remove landcover_chile
+  execGRASS(
+    cmd = "g.remove",
+    flags = "f",
+    type = "raster",
+    name = "landcover_chile"
+  )
+  
+  return(TRUE)
+}
+
+import_glaciers <- function(
+    input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
+    output_name = "glaciers_chile") {
+  
+  # glaciers from inventary
+  execGRASS(
+    cmd = "v.in.ogr",
+    flags = c("overwrite", "r"),
+    input = input_path_glaciers,
+    output = output_name
+  )
+  # create glacier raster
+  execGRASS(
+    cmd = "v.to.rast",
+    input = output_name,
+    output = output_name,
+    use = "cat"
+  )
+  #remove glaciers_chile_vector
+  execGRASS(
+    cmd = "g.remove",
+    flags = "f",
+    type = "vector",
+    name = output_name
+  )
+  return(T)
+}
