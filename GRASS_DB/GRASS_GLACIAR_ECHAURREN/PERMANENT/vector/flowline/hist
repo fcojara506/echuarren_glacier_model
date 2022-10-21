@@ -1,0 +1,3 @@
+COMMAND: r.flow --overwrite elevation="dem_rect@PERMANENT" flowline="flowline"
+GISDBASE: /Users/fco/Documents/GitHub/echuarren_glacier_model/GRASS_DB
+LOCATION: GRASS_GLACIAR_ECHAURREN MAPSET: PERMANENT USER: fco DATE: Thu Oct 20 18:37:13 2022
