@@ -11,13 +11,12 @@ create_subbasin <-
       intern = T
     )
     
-    # derive streams and drainage to define watershed
+    # derive streams and drainage direction to define watershed
     execGRASS(
       cmd = "r.watershed",
       elevation = "dem_rect",
       threshold = watershed_threshold,
       half_basin = "eha_t1",
-      stream = "streams",
       drainage = "drainage",
       intern = T
     )
@@ -59,34 +58,6 @@ create_subbasin <-
     return(TRUE)
   }
 
-# stream_order <- function(input,output) {
-#   execGRASS(cmd = "r.stream.order",
-#             flags = c("overwrite"),
-#             
-#             )
-# }
-
-stream_distance <- function(input_stream="streams",
-                             input_drenaige = "drenaige",
-                             input_elevation = "dem_rect",
-                             method_updown="downstream",
-                             output_distance = "stream_distance",
-                             output_elevation_difference = "stream_elevation_dif",
-                             addon_path ="/Users/fco/Library/GRASS/8.2/Addons/bin/"
-                             ) {
-  
-  execGRASS(cmd = paste0(addon_path, "r.stream.distance"),
-            flags = c("overwrite"),
-            stream_rast = input_stream,
-            direction = input_drenaige,
-            method = method_updown,
-            elevation = input_elevation,
-            distance = output_distance,
-            difference = output_elevation_difference,
-            intern = T
-            )
-  
-}
 
 delineate_watershed <- function(watershed_name = "cuenca_echaurren",
                                 outlet_coordinate = c(396350, 6282680)) {
@@ -102,61 +73,7 @@ delineate_watershed <- function(watershed_name = "cuenca_echaurren",
   return(TRUE)
 }
 
-buffer_streams <- function(buffer_distance = 50,
-                           output = "streams_buffer") {
-  # create river buffer
-  execGRASS(
-    cmd = "r.thin",
-    flags = "overwrite",
-    input = "streams",
-    output = "streams_thin",
-    intern = T
-  )
-  
-  execGRASS(
-    cmd = "r.to.vect",
-    flags = "overwrite",
-    input = "streams_thin",
-    output = "streams",
-    type = "line",
-    intern = T
-  )
-  execGRASS(
-    cmd = "v.buffer",
-    flags = "overwrite",
-    input = "streams",
-    output = output,
-    distance = buffer_distance,
-    intern = T
-  )
-  
-  execGRASS(
-    cmd = "v.to.rast",
-    flags = "overwrite",
-    input = output,
-    use = "cat",
-    output = output,
-    intern = T
-  )
-  #remove temporal rasters
-  execGRASS(
-    cmd = "g.remove",
-    flags = "f",
-    type = "raster",
-    name = c("streams_thin"),
-    intern = T
-  )
-  #remove temporal vectors
-  execGRASS(
-    cmd = "g.remove",
-    flags = "f",
-    type = "vector",
-    name = c("streams", "streams_buffer"),
-    intern = T
-  )
-  
-  return(TRUE)
-}
+
 
 compute_slope_aspect <- function(input_dem = "dem_rect",
                                  slope = "slope",

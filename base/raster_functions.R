@@ -16,14 +16,13 @@ raster_with_mask <- function(raster,mask,output) {
             intern = T)
 }
 
-raster_to_vector <- function(hru_name) {
+raster_to_vector <- function(input,output=input,...) {
   
   execGRASS(cmd = "r.to.vect",
-            input = hru_name,
-            output = hru_name,
-            type = "area",
-            flags = "overwrite",
-            intern = T)
+            input = input,
+            output = output,
+            intern = T,
+            ...)
   
 }
 

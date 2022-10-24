@@ -24,29 +24,13 @@ region_extension(
 # create sub-basins
 create_subbasin(
   input_path_dem = "GIS/DEM/AP_27001_FBS_F6500_RT1.dem.tif",
-  watershed_threshold = 250,
+  watershed_threshold = 500,
   subbasin_name = "subcuencas"
 )
-
-# create raster with buffer around streams
-buffer_streams(buffer_distance = 10,
-               output = "streams_buffer")
-# create raster with distance to nearest river and elevation difference
-stream_distance(
-  input_stream = "streams",
-  input_drenaige = "drainage",
-  input_elevation = "dem_rect",
-  method_updown = "downstream",
-  output_distance = "stream_distance",
-  output_elevation_difference = "stream_elevation_dif",
-  addon_path = "/Users/fco/Library/GRASS/8.2/Addons/bin/"
-)
-
 
 #define watershed based on outlet coordinate
 delineate_watershed(watershed_name = "cuenca_echaurren",
                     outlet_coordinate = c(396350, 6282680))
-
 
 # compute slope and aspect (azimuth with respect N)
 compute_slope_aspect(
@@ -55,10 +39,12 @@ compute_slope_aspect(
   aspect = "aspect_degreeN",
   slope_format = "degree"
 )
+
 # create elevation bands from dem
 contour_bands(input = "dem_rect",
-              output = "bandas_elevacion",
+              output = "bandas_elevacion_100m",
               by = 100)
+
 #create slope bands from slope raster
 contour_bands(input = "slope_degree",
               output = "bandas_pendiente",
@@ -80,5 +66,6 @@ raster_with_mask(raster = "glaciers_chile",
                  mask = "cuenca_echaurren",
                  output = "glaciers_echaurren")
 
-
-
+source("utils/stream_buffer.R")
+source("utils/test_HRU_settings_GLACIER.R")
+source("utils/test_HRU_settings.R")
