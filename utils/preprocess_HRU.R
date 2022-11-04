@@ -24,7 +24,7 @@ region_extension(
 # create sub-basins
 create_subbasin(
   input_path_dem = "GIS/DEM/AP_27001_FBS_F6500_RT1.dem.tif",
-  watershed_threshold = 500,
+  watershed_threshold = 2000,
   subbasin_name = "subcuencas"
 )
 
@@ -45,6 +45,11 @@ contour_bands(input = "dem_rect",
               output = "bandas_elevacion_100m",
               by = 100)
 
+# create elevation bands from dem
+contour_bands(input = "dem_rect",
+              output = "bandas_elevacion_200m",
+              by = 200)
+
 #create slope bands from slope raster
 contour_bands(input = "slope_degree",
               output = "bandas_pendiente",
@@ -53,19 +58,32 @@ contour_bands(input = "slope_degree",
 aspect_to_categories(input = "aspect_degreeN",
                      output = "bandas_orientacion",
                      rules_path = "GIS/rules_aspect_categories")
-
-#import glacier vector to raster
-import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
-                output_name = "glaciers_chile")
 #import landcover raster
 import_landcover(input_path_landcover = "GIS/LandCover CHILE 2014/LC_CHILE_2014_b.tif",
                  output_name = "landcover")
 
-# add elevation bands to glaciers
-raster_with_mask(raster = "glaciers_chile",
-                 mask = "cuenca_echaurren",
-                 output = "glaciers_echaurren")
+# #import glacier vector to raster
+# import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
+#                 output_name = "glaciers_chile")
+
+#import glacier vector to raster type "GLACIARETE"
+import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
+                output_name = "glaciers_echaurren_GLACIARETE",
+                sql_query = paste0("CLASIFICA = 'GLACIARETE'"),
+                mask = "cuenca_echaurren")
+
+#import glacier vector to raster type ROCOSO
+import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
+                output_name = "glaciers_echaurren_ROCOSO",
+                sql_query = paste0("CLASIFICA = 'GLACIAR ROCOSO'"),
+                mask = "cuenca_echaurren")
+
+#import glacier vector to raster
+import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
+                output_name = "glaciers_echaurren",
+                mask = "cuenca_echaurren")
 
 source("utils/stream_buffer.R")
 source("utils/test_HRU_settings_GLACIER.R")
+
 source("utils/test_HRU_settings.R")

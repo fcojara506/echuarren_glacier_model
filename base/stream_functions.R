@@ -117,11 +117,24 @@ stream_order <- function(input_stream="streams",
  
 }
 
+stream_filter_order <- function(input = "stream_strahler",
+                                  output = "stream_order_filtered",
+                                  threshold = 1) {
+  execGRASS(cmd = "r.mapcalc",
+            flags = "overwrite",
+            expression = paste0(output ,"= if(",input,"<= ",threshold," ,null(), ",input,")"),
+            intern = T
+            )
+  
+  
+}
+
 stream_segments <- function(input_stream="streams",
                             input_drainage = "drainage",
                             input_elevation = "dem_rect",
                             stream_segment = "stream_segments",
                             stream_sectors = "stream_sectors",
+                            skip_length = 5,
                             addon_path ="/Users/fco/Library/GRASS/8.2/Addons/bin/") {
 
 
@@ -132,6 +145,7 @@ stream_segments <- function(input_stream="streams",
             elevation=input_elevation,
             segments=stream_segment,
             sectors =stream_sectors,
+            skip = skip_length,
             intern = T)
   
   return(T)
@@ -196,7 +210,18 @@ buffer_per_segment <- function(
    return(TRUE)
 }
 
-buffer_to_segments <- function(input = "stream_buffer", output = "stream_buffer") {
+buffer_raster <- function(input,output,radius) {
+  
+  execGRASS("r.grow",
+            flags = "overwrite",
+            input = input,
+            output = output,
+            radius = radius,
+            intern = T)
+}
+buffer_to_segments <- function(input = "stream_buffer",
+                               output = "stream_buffer",
+                               radius = 1.01) {
   
     
     execGRASS("v.to.rast",
@@ -210,6 +235,9 @@ buffer_to_segments <- function(input = "stream_buffer", output = "stream_buffer"
               flags = "overwrite",
               input = output,
               output = output,
+              radius = radius,
               intern = T)
   
 }
+
+

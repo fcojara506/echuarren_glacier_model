@@ -102,3 +102,46 @@ create_hru <- function(mask = "cuenca_echaurren",
   return(TRUE)
   
 }
+
+patch_HRU_rasters <- function(input_rasters,
+                              output="HRU_v3",
+                              raster_to_vector=TRUE,
+                              threshold_clean=NULL
+                              ) {
+  execGRASS(
+    cmd = "r.patch",
+    flags = "overwrite",
+    input = paste(input_rasters, sep = ","),
+    #order matters
+    output = output,
+    intern = T
+  )
+  
+  
+  if ( !is.null(threshold_clean)) {
+      
+  execGRASS(
+    cmd = "r.reclass.area",
+    flags = "overwrite",
+    input = output,
+    output = output,
+    value = threshold_clean,
+    mode = "lesser",
+    method = "rmarea",
+    intern = T
+  )
+  }
+  
+  if (raster_to_vector) {
+    
+    execGRASS(cmd = "r.to.vect",
+              input = output,
+              output = output,
+              intern = T,
+              type = "area",
+              flags = "overwrite")
+    
+  }
+  
+}
+
