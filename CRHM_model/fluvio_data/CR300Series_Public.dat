@@ -1,0 +1,5 @@
+TOA5	CR300Series	CR300	1475	CR300.Std.02.00	CPU:ottpls_cr300.CR300	7395	Public
+TIMESTAMP	RECORD	Water_Level_cm	Water_Temp_C	Trigger_Measurement	Site_Offset		
+TS	RN	centimeter	degrees Celsius		centimeter		
+							
+2022-10-26 11:38:28.078	25	NAN	4.274.811	0	-17.7		

@@ -1,0 +1,5 @@
+TOA5	CR300Series	CR300	1475	CR300.Std.02.00	CPU:ottpls_cr300.CR300	7395	DataTableInfo
+TIMESTAMP	RECORD	DataTableName(1)	SkippedRecord	DataRecordSize	SecsPerRecord	DataFillDays	
+TS	RN			records		days	
+							
+2022-10-26 11:38:28.206	3	Table1	0	2528484	1800	52676.75	

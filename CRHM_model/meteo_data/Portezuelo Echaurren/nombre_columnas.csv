@@ -1,0 +1,13 @@
+id,nombre
+1,velocidad_viento_ms
+2,direccion_viento_grados
+3,temperatura_aire_celsius
+4,humedad_relativa_porcentaje
+5,SW_incidente_wattm2
+6,LW_incidente_wattm2
+7,presion_atm_mb
+8,temperatura_aire2_celsius
+9,humedad_relativa2_porc
+10,temperatura_interna_celsius
+11,Rad_solar_wattm2
+13,velocidad_vientomax_kmh

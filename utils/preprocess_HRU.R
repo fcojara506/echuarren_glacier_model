@@ -8,6 +8,7 @@ source("base/dem_operations.R")
 source("base/import_landcover.R")
 source("base/create_hru.R")
 source("base/raster_functions.R")
+source("base/export.R")
 
 #setting paths to start grass gis using R
 initialise_grass(empty_mapset = TRUE)
@@ -54,7 +55,8 @@ contour_bands(input = "dem_rect",
 contour_bands(input = "slope_degree",
               output = "bandas_pendiente",
               by = 12.5)
-# create
+
+# create aspect categories
 aspect_to_categories(input = "aspect_degreeN",
                      output = "bandas_orientacion",
                      rules_path = "GIS/rules_aspect_categories")
@@ -85,5 +87,13 @@ import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
 
 source("utils/stream_buffer.R")
 source("utils/test_HRU_settings_GLACIER.R")
-
 source("utils/test_HRU_settings.R")
+
+raster_stats(base = "HRU_v2_1",
+             cover = "dem_rect",
+             method = "average",
+             output = "HRU_elevacion")
+
+raster_to_vector(input = "HRU_elevacion",type = "area")
+
+source("utils/export_vectors_and_rasters.R")

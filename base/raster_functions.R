@@ -31,6 +31,11 @@ raster_stats <- function(base = "HRU",
                          method = "average",
                          output = paste0(base,"_",cover)) {
   print(output)
+  
+  execGRASS( cmd = "r.mapcalc",
+             expression = paste0(base,"= int(",base,")"),
+             flags = "overwrite")
+  
   execGRASS( cmd = "r.stats.zonal",
              flags = "overwrite",
              base = base,
