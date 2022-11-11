@@ -1,0 +1,12 @@
+id,nombre
+2,velocidad_viento_ms
+3,direccion_viento_grados
+4,temperatura_aire_celsius
+5,humedad_relativa_porcentaje
+6,SW_incidente_wattm2
+7,LW_incidente_wattm2
+8,Rad_solar_wattm2
+9,presion_atm_mb
+10,precipitacion_instantanea_mm
+11,precipitacion_acum_mm
+13,profundidad_nieve_cm

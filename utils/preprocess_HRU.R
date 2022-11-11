@@ -88,12 +88,5 @@ import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",
 source("utils/stream_buffer.R")
 source("utils/test_HRU_settings_GLACIER.R")
 source("utils/test_HRU_settings.R")
-
-raster_stats(base = "HRU_v2_1",
-             cover = "dem_rect",
-             method = "average",
-             output = "HRU_elevacion")
-
-raster_to_vector(input = "HRU_elevacion",type = "area")
-
 source("utils/export_vectors_and_rasters.R")
+source("utils/stats_per_HRU.R")

@@ -1,3 +1,4 @@
+library(rgrass)
 # mask a raster
 raster_with_mask <- function(raster,mask,output) {
   # add mask
