@@ -82,6 +82,8 @@ get_HRU_centroids <- function(input_vector = "HRU_v2_1",
               separator = "pipe",
               input = "xy",
               intern = T)
+  }else{
+    
   }
   
  xy= data.frame(data = xy) %>%
@@ -93,6 +95,11 @@ get_HRU_centroids <- function(input_vector = "HRU_v2_1",
    sapply(as.numeric ) %>% 
    as.data.frame() %>% 
    arrange(HRU)
+ 
+ if (file.exists("xy")) {
+   #Delete file if it exists
+   file.remove("xy")
+ }
  
   return(xy)
 }
