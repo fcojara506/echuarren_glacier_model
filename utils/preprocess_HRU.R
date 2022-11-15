@@ -90,3 +90,6 @@ source("utils/test_HRU_settings_GLACIER.R")
 source("utils/test_HRU_settings.R")
 source("utils/export_vectors_and_rasters.R")
 source("utils/stats_per_HRU.R")
+
+#setting paths to start grass gis using R
+initialise_grass(empty_mapset = TRUE)
