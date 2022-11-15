@@ -1,5 +1,5 @@
 Description - to be added
-###### Version: CRHM 06/09/20  Creation: 15-11-2022 18:22
+###### Version: CRHM 06/09/20  Creation: 15-11-2022 18:55
 Dimensions:
 ######
 nhru 48
@@ -13,10 +13,10 @@ Observations:
 ######
 meteo_data/CRHM_obs_data/obs_test_Qli.obs
 meteo_data/CRHM_obs_data/obs_test_Qsi.obs
-meteo_data/CRHM_obs_data/obs_test_rh.obs
-meteo_data/CRHM_obs_data/obs_test_u.obs       
-meteo_data/CRHM_obs_data/obs_test_p.obs
+meteo_data/CRHM_obs_data/obs_test_u.obs
 meteo_data/CRHM_obs_data/obs_test_t.obs
+meteo_data/CRHM_obs_data/obs_test_p.obs
+meteo_data/CRHM_obs_data/obs_test_rh.obs
 ######
 Dates:
 ######
@@ -158,9 +158,9 @@ basin hru_names
 basin INIT_STATE
 '' 
 basin Loop_to
-' ' ' ' 
+'' '' 
 basin RapidAdvance_to
-' ' 
+'' 
 basin RUN_END <0 to 1E5>
 0 
 basin RUN_ID <-1E8 to 1E8>
