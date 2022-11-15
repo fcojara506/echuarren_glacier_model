@@ -68,8 +68,16 @@ df_valle_echaurren = merge_files_to_columns(meteo_file_list,column_names) %>%
   cbind(precipitacion_invervalo_mm=c(0,diff(.$precipitacion_acum_mm))) %>% 
   mutate(precipitacion_invervalo_mm = (abs(precipitacion_invervalo_mm)+precipitacion_invervalo_mm)/2)
 
+#define observation file
+obs = df_valle_echaurren
 
-library(reshape2)
-df1 = reshape2::melt(df_portezuelo_echaurren,id.vars = "datetime") %>% mutate(estacion = "portezuelo_echaurren")
-df2 = reshape2::melt(df_valle_echaurren,id.vars = "datetime") %>% mutate(estacion = "valle_echaurren")
-df3 = merge(df1,df2,all = T)
+#remove unnecessary meteorological variables
+obs = subset(obs, select = -c(
+  precipitacion_instantanea_mm,
+  precipitacion_acum_mm,
+  direccion_viento_grados,
+  Rad_solar_wattm2,
+  presion_atm_mb
+  ))
+
+
