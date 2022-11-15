@@ -617,3 +617,99 @@
 2022-11-11_19:46:20 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
 2022-11-11_19:46:20 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_ASL 
 2022-11-11_19:46:20 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-15_15:46:26 createObsDataframe variables:t.1 
+2022-11-15_15:53:21 writeObsFile dataframe:obs_crhm .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:14:41 createObsDataframe variables:t.1 
+2022-11-15_16:26:44 createObsDataframe variables:t.1 
+2022-11-15_16:26:44 writeObsFile dataframe:obs_crhm_merged .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:27:00 createObsDataframe variables:t.1 
+2022-11-15_16:27:00 writeObsFile dataframe:obs_crhm_merged .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:27:06 createObsDataframe variables:t.1 
+2022-11-15_16:27:06 writeObsFile dataframe:obs_crhm_merged .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:27:58 createObsDataframe variables:t.1 
+2022-11-15_16:27:58 writeObsFile dataframe:obs_crhm_merged .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:29:47 createObsDataframe variables:t.1 
+2022-11-15_16:29:56 createObsDataframe variables:t.1 
+2022-11-15_16:30:24 createObsDataframe variables:t.1 
+2022-11-15_16:30:24 writeObsFile dataframe:obs_crhm .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:44:37 createObsDataframe variables:t.1 
+2022-11-15_16:44:37 writeObsFile dataframe:df .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:46:02 trimObs dataframe:df 
+2022-11-15_16:46:37 createObsDataframe variables:t.1 
+2022-11-15_16:46:37 trimObs dataframe:df 
+2022-11-15_16:46:37 writeObsFile dataframe:df .obs file: obs_test_t_2022-11-15.obs 
+2022-11-15_16:51:16 createObsDataframe variables:t.1 
+2022-11-15_16:51:16 trimObs dataframe:df 
+2022-11-15_16:51:16 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_t_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:t.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_t_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:p.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_p_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:u.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_u_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:rh.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_rh_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:Qsi.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qsi_2022-11-15.obs 
+2022-11-15_16:58:19 createObsDataframe variables:Qli.1 
+2022-11-15_16:58:19 trimObs dataframe:df 
+2022-11-15_16:58:19 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qli_2022-11-15.obs 
+2022-11-15_17:05:35 createObsDataframe variables:t.1,t.2,t.3,t.4,t.5,t.6,t.7,t.8,t.9,t.10,t.11,t.12,t.13,t.14,t.15,t.16,t.17,t.18,t.19,t.20,t.21,t.22,t.23,t.24,t.25,t.26,t.27,t.28,t.29,t.30,t.31,t.32,t.33,t.34,t.35,t.36,t.37,t.38,t.39,t.40,t.41,t.42,t.43,t.44,t.45,t.46,t.47,t.48 
+2022-11-15_17:05:35 trimObs dataframe:df 
+2022-11-15_17:05:35 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_t_2022-11-15.obs 
+2022-11-15_17:05:35 createObsDataframe variables:p.1,p.2,p.3,p.4,p.5,p.6,p.7,p.8,p.9,p.10,p.11,p.12,p.13,p.14,p.15,p.16,p.17,p.18,p.19,p.20,p.21,p.22,p.23,p.24,p.25,p.26,p.27,p.28,p.29,p.30,p.31,p.32,p.33,p.34,p.35,p.36,p.37,p.38,p.39,p.40,p.41,p.42,p.43,p.44,p.45,p.46,p.47,p.48 
+2022-11-15_17:05:35 trimObs dataframe:df 
+2022-11-15_17:05:36 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_p_2022-11-15.obs 
+2022-11-15_17:05:36 createObsDataframe variables:u.1,u.2,u.3,u.4,u.5,u.6,u.7,u.8,u.9,u.10,u.11,u.12,u.13,u.14,u.15,u.16,u.17,u.18,u.19,u.20,u.21,u.22,u.23,u.24,u.25,u.26,u.27,u.28,u.29,u.30,u.31,u.32,u.33,u.34,u.35,u.36,u.37,u.38,u.39,u.40,u.41,u.42,u.43,u.44,u.45,u.46,u.47,u.48 
+2022-11-15_17:05:36 trimObs dataframe:df 
+2022-11-15_17:05:36 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_u_2022-11-15.obs 
+2022-11-15_17:05:36 createObsDataframe variables:rh.1,rh.2,rh.3,rh.4,rh.5,rh.6,rh.7,rh.8,rh.9,rh.10,rh.11,rh.12,rh.13,rh.14,rh.15,rh.16,rh.17,rh.18,rh.19,rh.20,rh.21,rh.22,rh.23,rh.24,rh.25,rh.26,rh.27,rh.28,rh.29,rh.30,rh.31,rh.32,rh.33,rh.34,rh.35,rh.36,rh.37,rh.38,rh.39,rh.40,rh.41,rh.42,rh.43,rh.44,rh.45,rh.46,rh.47,rh.48 
+2022-11-15_17:05:36 trimObs dataframe:df 
+2022-11-15_17:05:36 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_rh_2022-11-15.obs 
+2022-11-15_17:05:36 createObsDataframe variables:Qsi.1,Qsi.2,Qsi.3,Qsi.4,Qsi.5,Qsi.6,Qsi.7,Qsi.8,Qsi.9,Qsi.10,Qsi.11,Qsi.12,Qsi.13,Qsi.14,Qsi.15,Qsi.16,Qsi.17,Qsi.18,Qsi.19,Qsi.20,Qsi.21,Qsi.22,Qsi.23,Qsi.24,Qsi.25,Qsi.26,Qsi.27,Qsi.28,Qsi.29,Qsi.30,Qsi.31,Qsi.32,Qsi.33,Qsi.34,Qsi.35,Qsi.36,Qsi.37,Qsi.38,Qsi.39,Qsi.40,Qsi.41,Qsi.42,Qsi.43,Qsi.44,Qsi.45,Qsi.46,Qsi.47,Qsi.48 
+2022-11-15_17:05:36 trimObs dataframe:df 
+2022-11-15_17:05:36 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qsi_2022-11-15.obs 
+2022-11-15_17:05:36 createObsDataframe variables:Qli.1,Qli.2,Qli.3,Qli.4,Qli.5,Qli.6,Qli.7,Qli.8,Qli.9,Qli.10,Qli.11,Qli.12,Qli.13,Qli.14,Qli.15,Qli.16,Qli.17,Qli.18,Qli.19,Qli.20,Qli.21,Qli.22,Qli.23,Qli.24,Qli.25,Qli.26,Qli.27,Qli.28,Qli.29,Qli.30,Qli.31,Qli.32,Qli.33,Qli.34,Qli.35,Qli.36,Qli.37,Qli.38,Qli.39,Qli.40,Qli.41,Qli.42,Qli.43,Qli.44,Qli.45,Qli.46,Qli.47,Qli.48 
+2022-11-15_17:05:36 trimObs dataframe:df 
+2022-11-15_17:05:37 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qli_2022-11-15.obs 
+2022-11-15_17:07:44 createObsDataframe variables:t.1,t.2,t.3,t.4,t.5,t.6,t.7,t.8,t.9,t.10,t.11,t.12,t.13,t.14,t.15,t.16,t.17,t.18,t.19,t.20,t.21,t.22,t.23,t.24,t.25,t.26,t.27,t.28,t.29,t.30,t.31,t.32,t.33,t.34,t.35,t.36,t.37,t.38,t.39,t.40,t.41,t.42,t.43,t.44,t.45,t.46,t.47,t.48 
+2022-11-15_17:07:44 trimObs dataframe:df 
+2022-11-15_17:07:45 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_t_2022-11-15.obs 
+2022-11-15_17:07:45 createObsDataframe variables:p.1 
+2022-11-15_17:07:45 trimObs dataframe:df 
+2022-11-15_17:07:45 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_p_2022-11-15.obs 
+2022-11-15_17:07:45 createObsDataframe variables:u.1 
+2022-11-15_17:07:45 trimObs dataframe:df 
+2022-11-15_17:07:45 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_u_2022-11-15.obs 
+2022-11-15_17:07:45 createObsDataframe variables:rh.1,rh.2,rh.3,rh.4,rh.5,rh.6,rh.7,rh.8,rh.9,rh.10,rh.11,rh.12,rh.13,rh.14,rh.15,rh.16,rh.17,rh.18,rh.19,rh.20,rh.21,rh.22,rh.23,rh.24,rh.25,rh.26,rh.27,rh.28,rh.29,rh.30,rh.31,rh.32,rh.33,rh.34,rh.35,rh.36,rh.37,rh.38,rh.39,rh.40,rh.41,rh.42,rh.43,rh.44,rh.45,rh.46,rh.47,rh.48 
+2022-11-15_17:07:45 trimObs dataframe:df 
+2022-11-15_17:07:45 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_rh_2022-11-15.obs 
+2022-11-15_17:07:45 createObsDataframe variables:Qsi.1,Qsi.2,Qsi.3,Qsi.4,Qsi.5,Qsi.6,Qsi.7,Qsi.8,Qsi.9,Qsi.10,Qsi.11,Qsi.12,Qsi.13,Qsi.14,Qsi.15,Qsi.16,Qsi.17,Qsi.18,Qsi.19,Qsi.20,Qsi.21,Qsi.22,Qsi.23,Qsi.24,Qsi.25,Qsi.26,Qsi.27,Qsi.28,Qsi.29,Qsi.30,Qsi.31,Qsi.32,Qsi.33,Qsi.34,Qsi.35,Qsi.36,Qsi.37,Qsi.38,Qsi.39,Qsi.40,Qsi.41,Qsi.42,Qsi.43,Qsi.44,Qsi.45,Qsi.46,Qsi.47,Qsi.48 
+2022-11-15_17:07:45 trimObs dataframe:df 
+2022-11-15_17:07:45 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qsi_2022-11-15.obs 
+2022-11-15_17:07:45 createObsDataframe variables:Qli.1,Qli.2,Qli.3,Qli.4,Qli.5,Qli.6,Qli.7,Qli.8,Qli.9,Qli.10,Qli.11,Qli.12,Qli.13,Qli.14,Qli.15,Qli.16,Qli.17,Qli.18,Qli.19,Qli.20,Qli.21,Qli.22,Qli.23,Qli.24,Qli.25,Qli.26,Qli.27,Qli.28,Qli.29,Qli.30,Qli.31,Qli.32,Qli.33,Qli.34,Qli.35,Qli.36,Qli.37,Qli.38,Qli.39,Qli.40,Qli.41,Qli.42,Qli.43,Qli.44,Qli.45,Qli.46,Qli.47,Qli.48 
+2022-11-15_17:07:45 trimObs dataframe:df 
+2022-11-15_17:07:46 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qli_2022-11-15.obs 
+2022-11-15_17:10:07 createObsDataframe variables:t.1,t.2,t.3,t.4,t.5,t.6,t.7,t.8,t.9,t.10,t.11,t.12,t.13,t.14,t.15,t.16,t.17,t.18,t.19,t.20,t.21,t.22,t.23,t.24,t.25,t.26,t.27,t.28,t.29,t.30,t.31,t.32,t.33,t.34,t.35,t.36,t.37,t.38,t.39,t.40,t.41,t.42,t.43,t.44,t.45,t.46,t.47,t.48 
+2022-11-15_17:10:07 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_t.obs 
+2022-11-15_17:10:08 createObsDataframe variables:p.1 
+2022-11-15_17:10:08 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_p.obs 
+2022-11-15_17:10:08 createObsDataframe variables:u.1 
+2022-11-15_17:10:08 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_u.obs 
+2022-11-15_17:10:08 createObsDataframe variables:rh.1,rh.2,rh.3,rh.4,rh.5,rh.6,rh.7,rh.8,rh.9,rh.10,rh.11,rh.12,rh.13,rh.14,rh.15,rh.16,rh.17,rh.18,rh.19,rh.20,rh.21,rh.22,rh.23,rh.24,rh.25,rh.26,rh.27,rh.28,rh.29,rh.30,rh.31,rh.32,rh.33,rh.34,rh.35,rh.36,rh.37,rh.38,rh.39,rh.40,rh.41,rh.42,rh.43,rh.44,rh.45,rh.46,rh.47,rh.48 
+2022-11-15_17:10:08 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_rh.obs 
+2022-11-15_17:10:08 createObsDataframe variables:Qsi.1,Qsi.2,Qsi.3,Qsi.4,Qsi.5,Qsi.6,Qsi.7,Qsi.8,Qsi.9,Qsi.10,Qsi.11,Qsi.12,Qsi.13,Qsi.14,Qsi.15,Qsi.16,Qsi.17,Qsi.18,Qsi.19,Qsi.20,Qsi.21,Qsi.22,Qsi.23,Qsi.24,Qsi.25,Qsi.26,Qsi.27,Qsi.28,Qsi.29,Qsi.30,Qsi.31,Qsi.32,Qsi.33,Qsi.34,Qsi.35,Qsi.36,Qsi.37,Qsi.38,Qsi.39,Qsi.40,Qsi.41,Qsi.42,Qsi.43,Qsi.44,Qsi.45,Qsi.46,Qsi.47,Qsi.48 
+2022-11-15_17:10:08 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qsi.obs 
+2022-11-15_17:10:08 createObsDataframe variables:Qli.1,Qli.2,Qli.3,Qli.4,Qli.5,Qli.6,Qli.7,Qli.8,Qli.9,Qli.10,Qli.11,Qli.12,Qli.13,Qli.14,Qli.15,Qli.16,Qli.17,Qli.18,Qli.19,Qli.20,Qli.21,Qli.22,Qli.23,Qli.24,Qli.25,Qli.26,Qli.27,Qli.28,Qli.29,Qli.30,Qli.31,Qli.32,Qli.33,Qli.34,Qli.35,Qli.36,Qli.37,Qli.38,Qli.39,Qli.40,Qli.41,Qli.42,Qli.43,Qli.44,Qli.45,Qli.46,Qli.47,Qli.48 
+2022-11-15_17:10:08 trimObs dataframe:df 
+2022-11-15_17:10:08 writeObsFile dataframe:df .obs file: meteo_data/CRHM_obs_data/obs_test_Qli.obs 
