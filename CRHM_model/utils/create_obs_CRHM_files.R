@@ -9,6 +9,7 @@ rep.col<-function(x,n){matrix(rep(x,each=n), ncol=n, byrow=TRUE)}
 create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
                                          num_obs = 1,
                                          obs_matrix = obs,
+                                         remove_negatives = T,
                                          date_init = as.character(as.Date(head(obs_matrix$datetime, 1))),
                                          date_end = as.character(as.Date(tail(obs_matrix$datetime, 1))),
                                          output_filename=glue('meteo_data/CRHM_obs_data/obs_test_{meteo_CRHM_variable}.obs')
@@ -45,10 +46,14 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
  # interpolate na values
  df = CRHMr::interpolate(obs = df,
                          varcols = seq(1,ncol(df)-1),
-                         methods = "spline",
+                         methods = "linear",
                          maxlength = 24*5,
                          quiet = T,
                          logfile = "")
+ #remove negatives after interpolation
+ if (remove_negatives) {
+   df[df<0]=0
+ }
  
  #define column names
  names(df) = names(obs_crhm)
@@ -73,9 +78,9 @@ CRHM_var_OBS_col = list(
   "t" = c("temperatura_aire_celsius"),
   "p" = c("precipitacion_invervalo_mm"),
   "u" = c("velocidad_viento_ms"),
-  "Qsi"= c("SW_incidente_wattm2"),
   "Qli"= c("LW_incidente_wattm2"),
-  "rh" = c("humedad_relativa_porcentaje")
+  "rh" = c("humedad_relativa_porcentaje"),
+  "Qsi"= c("SW_incidente_wattm2")
 )
 
 CRHM_var_OBS_num = list(
@@ -93,10 +98,10 @@ for (var_CRHM in names(CRHM_var_OBS_col)) {
 df = create_obs_file_per_variable(
   date_init = "2022-03-01",
   meteo_CRHM_variable = var_CRHM,
+  remove_negatives = ifelse(var_CRHM=="t",F,T),
   obs_matrix = obs[,c("datetime",rep(CRHM_var_OBS_col[[var_CRHM]],
                                      CRHM_var_OBS_num[[var_CRHM]]))]
   )
 
 }
 
-#CRHMr::trimObs()
