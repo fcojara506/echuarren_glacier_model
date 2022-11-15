@@ -92,4 +92,4 @@ source("utils/export_vectors_and_rasters.R")
 source("utils/stats_per_HRU.R")
 
 #setting paths to start grass gis using R
-initialise_grass(empty_mapset = TRUE)
+#initialise_grass(empty_mapset = TRUE)

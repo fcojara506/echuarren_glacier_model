@@ -50,7 +50,6 @@ for (parameter in names(list_parameter_colum)) {
                     round_decimals = ifelse(parameter=="hru_lat",5,3)) 
 }
 
-
 #set basin area as the sum of the HRU areas
 CRHMr::setPrjParameters(inputPrjFile = prj_filename,
                         paramName = "basin_area",

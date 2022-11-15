@@ -28,7 +28,37 @@ df[["area_km2"]] =
 
 # merge all properties in columns 
 df = Reduce(f = merge, x = df)
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
 
+df$pendiente_grados = 0
+
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
+#####
 # export data
 write.csv2(x = df,
            file = "CRHM_model/basin_data/HRU_basin_properties.csv",row.names = F)

@@ -38,8 +38,7 @@ for (input_raster in names(input_rasters)) {
     as.data.frame() %>% 
     arrange(HRU)
   
-  remove_pattern(pattern = output,
-                 type = "raster,vector")
+  #remove_pattern(pattern = output,type = "raster,vector")
 }
   }else{
   errorCondition("input needs to be a list")
