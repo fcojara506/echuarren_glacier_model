@@ -3,7 +3,6 @@ require(CRHMr)
 require(lubridate)
 require(glue)
 
-
 rep.col<-function(x,n){matrix(rep(x,each=n), ncol=n, byrow=TRUE)}
 
 create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
@@ -22,7 +21,7 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
   }
   # end date
   if (date_end != as.character(tail(asdates_obs, 1)) ) {
-    date_end = min(date_init, as.character(tail(asdates_obs, 1)))
+    date_end = min(date_end, as.character(tail(asdates_obs, 1)))
   }
   
   #empty dataframe
@@ -75,7 +74,6 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
 obs = readRDS(file = "meteo_data/obs_20221115.RDS")
 
 CRHM_var_OBS_col = list(
-  "t" = c("temperatura_aire_celsius"),
   "p" = c("precipitacion_invervalo_mm"),
   "u" = c("velocidad_viento_ms"),
   "Qli"= c("LW_incidente_wattm2"),
@@ -84,7 +82,6 @@ CRHM_var_OBS_col = list(
 )
 
 CRHM_var_OBS_num = list(
-  "t" = 48,
   "p" = 1,
   "u" = 1,
   "Qsi"= 48,
@@ -94,9 +91,9 @@ CRHM_var_OBS_num = list(
 
 for (var_CRHM in names(CRHM_var_OBS_col)) {
   
-
 df = create_obs_file_per_variable(
   date_init = "2022-03-01",
+  date_end = "2022-11-01",
   meteo_CRHM_variable = var_CRHM,
   remove_negatives = ifelse(var_CRHM=="t",F,T),
   obs_matrix = obs[,c("datetime",rep(CRHM_var_OBS_col[[var_CRHM]],
@@ -105,3 +102,13 @@ df = create_obs_file_per_variable(
 
 }
 
+#temperature
+tem = readRDS(file = "meteo_data/tem_20221115.RDS")
+
+df2 = create_obs_file_per_variable(
+  date_init = "2022-03-01",
+  date_end = "2022-11-01",
+  meteo_CRHM_variable = "t",
+  remove_negatives = F,
+  obs_matrix = tem
+)

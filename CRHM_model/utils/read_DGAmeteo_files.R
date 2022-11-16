@@ -56,6 +56,14 @@ column_names = read.csv("meteo_data/Portezuelo Echaurren/nombre_columnas.csv")
 
 df_portezuelo_echaurren = merge_files_to_columns(meteo_file_list,column_names)
 
+# negative to zero
+df_portezuelo_echaurren = df_portezuelo_echaurren %>%
+  mutate(SW_incidente_wattm2 = (abs(SW_incidente_wattm2)+SW_incidente_wattm2)/2) %>% 
+  mutate(LW_incidente_wattm2 = (abs(LW_incidente_wattm2)+LW_incidente_wattm2)/2) %>%
+  mutate(velocidad_viento_ms = (abs(velocidad_viento_ms)+velocidad_viento_ms)/2) %>% 
+  mutate(datetime = lubridate::round_date(datetime,unit="hour"))
+
+
 # Valle Echaurren
 # read all the "number".csv file in the station folder
 meteo_file_list = list.files(path = "meteo_data/VALLE ECHAURREN/",
@@ -72,9 +80,8 @@ df_valle_echaurren = df_valle_echaurren %>%
   mutate(precipitacion_invervalo_mm = (abs(precipitacion_invervalo_mm)+precipitacion_invervalo_mm)/2) %>% 
   mutate(SW_incidente_wattm2 = (abs(SW_incidente_wattm2)+SW_incidente_wattm2)/2) %>% 
   mutate(LW_incidente_wattm2 = (abs(LW_incidente_wattm2)+LW_incidente_wattm2)/2) %>%
-  mutate(velocidad_viento_ms = (abs(velocidad_viento_ms)+velocidad_viento_ms)/2)
-
-
+  mutate(velocidad_viento_ms = (abs(velocidad_viento_ms)+velocidad_viento_ms)/2) %>% 
+  mutate(datetime = lubridate::round_date(datetime,unit="hour"))
 
 
 
@@ -87,19 +94,7 @@ df_valle_echaurren = df_valle_echaurren %>%
 
 #define observation file
 obs = df_valle_echaurren
-
-#remove unnecessary meteorological variables
-obs = subset(obs, select = -c(
-  precipitacion_instantanea_mm,
-  precipitacion_acum_mm,
-  direccion_viento_grados,
-  Rad_solar_wattm2,
-  presion_atm_mb
-  ))
-
-# round dates
-obs$datetime = lubridate::round_date(obs$datetime,unit="hour")
-
-saveRDS(object = obs,
-        file = "meteo_data/obs_20221115.RDS")
+saveRDS(object = obs,file = "meteo_data/obs_20221115.RDS")
+saveRDS(object = df_portezuelo_echaurren,file = "meteo_data/obs_pe_20221115.RDS")
+saveRDS(object = df_valle_echaurren,file = "meteo_data/obs_ve_20221115.RDS")
 
