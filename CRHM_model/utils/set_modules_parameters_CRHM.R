@@ -25,7 +25,7 @@ source("utils/set_basin_parameters_CRHM.R")
 ##                            global                             -
 ##----------------------------------------------------------------
 par_name_value = list(
-  "Ht"=0
+  "Ht"=0.001
 )
 
 for (parameter in names(par_name_value)) {
