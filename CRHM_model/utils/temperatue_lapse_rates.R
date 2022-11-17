@@ -6,7 +6,8 @@ library(CRHMr)
 lapse_rate_tem <- function(date="2022-01-14 13:00:00",
                  obs_pe,
                  obs_ve,
-                 new_z = seq(2500,6000,100)) {
+                 new_z,
+                 log_t = F) {
   print(date)
   
 df1 = obs_pe %>%
@@ -19,12 +20,13 @@ df2 = obs_ve %>%
 
 df = rbind(df1,df2)
 
-reg_lm = lm(formula = log(temperatura_aire_kelvin) ~ z_m,
-            data = df)
-
-new_tem = predict.lm(reg_lm,
-                     newdata = data.frame(z_m = new_z)) %>% 
-  exp()
+if (log_t) {
+reg_lm = lm(formula = log(temperatura_aire_kelvin) ~ z_m,data = df)
+new_tem = predict.lm(reg_lm, newdata = data.frame(z_m = new_z)) %>% exp()
+}else{
+  reg_lm = lm(formula = temperatura_aire_kelvin ~ z_m,data = df)
+  new_tem = predict.lm(reg_lm, newdata = data.frame(z_m = new_z))
+}
 
 #back to Celsius
 new_tem=new_tem-265.15
