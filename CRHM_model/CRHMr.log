@@ -1196,3 +1196,147 @@
 2022-11-17_16:13:09 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrKstorage 
 2022-11-17_16:13:09 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
 2022-11-17_16:13:09 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrLag 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_area 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_lat 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_elev 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_GSL 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_ASL 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: basin_area 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: obs_elev 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: HRU_OBS 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Time_Offset 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Ks_gw 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Ks_lower 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Ks_upper 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: PSD 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: epsilon_s 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName:  Vt  
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: evap_type 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: F_Qg 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName:  rs  
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Hd_min 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: snow_density 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: use_rho 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: a1 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: a2 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Albedo_Bare 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Albedo_Snow 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: amax 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: amin 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: smin 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: A_S 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: fetch 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: N_S  
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_F_g 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_rho_snow 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: hru_T_g 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: KT_sand 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: max_h2o_vol 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: max_z_s_0 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: rain_soil_snow 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: relative_hts 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: T_g_or_G_flux 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: z_0 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: z_g 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: z_T 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: z_u 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: fallstat 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: infDays 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Major 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: PriorInfiltration 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: texture 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: cov_type 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: gw_init 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: gw_max 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Sdinit 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: soil_moist_init 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: soil_rechr_init 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: soil_ssr_runoff 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: soil_withdrawal 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Wetlands_scaling_factor 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Channel_shp 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: gwKstorage 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: gwLag 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName:  Lag  
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: preferential_flow 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: route_L 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: route_n 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: route_R 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: route_S0 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: route_X_M 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: runKstorage 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: runLag 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: Sd_ByPass 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrKstorage 
+2022-11-17_16:16:32 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
+2022-11-17_16:16:32 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrLag 
