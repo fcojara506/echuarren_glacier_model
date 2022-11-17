@@ -34,7 +34,7 @@ raster_stats <- function(base = "HRU",
   print(output)
   
   execGRASS( cmd = "r.mapcalc",
-             expression = paste0(base,"= int(",base,")"),
+             expression = paste0(base,"= abs(",base,")"),
              flags = "overwrite")
   
   execGRASS( cmd = "r.stats.zonal",

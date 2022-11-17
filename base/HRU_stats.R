@@ -1,4 +1,5 @@
-HRU_stats <- function(input_raster = list(),base_HRU="HRU_v2_1") {
+HRU_stats <- function(input_raster = list(),
+                      base_HRU="HRU_v2_1") {
   #initialise blank list with properties per HRU
   df = list()
 

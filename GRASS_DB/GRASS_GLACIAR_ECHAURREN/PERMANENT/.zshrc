@@ -27,5 +27,5 @@ PROMPT_COMMAND=grass_prompt
 precmd() { eval "$PROMPT_COMMAND" }
 RPROMPT='${ZLOC}'
 export HOME="/Users/fco"
-export PATH="/Applications/GRASS-8.2.app/Contents/Resources/bin:/Applications/GRASS-8.2.app/Contents/Resources/scripts:/Users/fco/Library/GRASS/8.2/Addons/bin:/Users/fco/Library/GRASS/8.2/Addons/scripts:/opt/homebrew/bin:/opt/anaconda3/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/Applications/GRASS-8.2.app/Contents/Resources/bin:/Applications/GRASS-8.2.app/Contents/Resources/scripts:/Users/fco/Library/GRASS/8.2/Addons/bin:/Users/fco/Library/GRASS/8.2/Addons/scripts:/opt/homebrew/bin:/opt/anaconda3/bin:/opt/anaconda3/condabin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 trap "exit" TERM

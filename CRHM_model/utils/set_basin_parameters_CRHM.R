@@ -55,3 +55,10 @@ CRHMr::setPrjParameters(inputPrjFile = prj_filename,
                         paramName = "basin_area",
                         paramVals = sum(basin_df$area_km2))
 
+#set station elevation
+CRHMr::setPrjParameters(inputPrjFile = prj_filename,
+                        paramName = "obs_elev",
+                        paramVals = rep(basin_df[,"elevacion_msnm"]+2,2)
+                        )
+
+

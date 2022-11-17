@@ -31,3 +31,11 @@ patch_HRU_rasters(input_rasters = c("HRU_GLACIAR","HRU_v1"),
                   output = "HRU_v2_1",
                   raster_to_vector = T,
                   threshold_clean = 0.5)
+
+execGRASS(cmd = "v.to.rast",
+          flags = "overwrite",
+          input = "HRU_v2_1",
+          output= "HRU_v2_1",
+          use = "cat")
+          
+
