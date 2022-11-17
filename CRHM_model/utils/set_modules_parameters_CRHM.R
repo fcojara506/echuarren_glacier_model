@@ -111,25 +111,25 @@ par_name_value = list(
   "A_S" = 0.003,
   "inhibit_bs" = 1 , #1 inhibit
   "inhibit_subl" = 1, #1 inhibit
-  #"distrib" = 0,
+  " distrib "  = 1, #default 0
   "fetch" = 1500,
   "N_S " = 1,
   ##----------------------------------------------------------------
   ##                          SnobalCRHM                           -
   ##----------------------------------------------------------------
-  "hru_F_g" = 0,
+  "hru_F_g" = 0, #fixed   
   "hru_rho_snow" = 100,
   "hru_T_g" = -2, #0.4 Michelle, -1.3, -4.7 Maria,
   "KT_sand" = 1.65, # default 0.08,
-  "max_h2o_vol" = 0.0001,# default 0.0001, 0.01 Michelle, 0.0015 Maria,
+  "max_h2o_vol" = 0.001,# default 0.0001, 0.01 Michelle, 0.0015 Maria,
   "max_z_s_0" = 0.1,
-  "rain_soil_snow" = 1,# 1 Maria in some HRUs
+  "rain_soil_snow" = 0,# 1 Maria in some HRUs
   "relative_hts" = 0,
   "T_g_or_G_flux" = 1, #0:Tg, 1:G_flux
   "z_0"= 0.001,
   "z_g" = 0.1,
   "z_T" = 2,
-  "z_u" = 2,# 10m or 2m
+  "z_u" = 10,# 10m or 2m
   ##---------------------------------------------------------------
   ##                      PrairieInfiltration                     -
   ##---------------------------------------------------------------
