@@ -116,8 +116,8 @@ par_name_value = list(
   ##                          pbsmSnobal                           -
   ##----------------------------------------------------------------
   "A_S" = 0.003,
-  "inhibit_bs" = 1 , #1 inhibit
-  "inhibit_subl" = 1, #1 inhibit
+  "inhibit_bs" = 0 , #1 inhibit
+  "inhibit_subl" = 0, #1 inhibit
   " distrib "  = 1, #default 0
   "fetch" = 1500,
   "N_S " = 1,
