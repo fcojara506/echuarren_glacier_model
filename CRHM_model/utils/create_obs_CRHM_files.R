@@ -78,7 +78,8 @@ CRHM_var_OBS_col = list(
   "u" = c("velocidad_viento_ms"),
   "Qli"= c("LW_incidente_wattm2"),
   "rh" = c("humedad_relativa_porcentaje"),
-  "Qsi"= c("SW_incidente_wattm2")
+  "Qsi"= c("SW_incidente_wattm2"),
+  "h_snow" = c("profundidad_nieve_m")
 )
 
 CRHM_var_OBS_num = list(
@@ -86,7 +87,8 @@ CRHM_var_OBS_num = list(
   "u" = 1,
   "Qsi"= 48,
   "Qli"= 48,
-  "rh" = 48
+  "rh" = 48,
+  "h_snow" = 1
 )
 
 for (var_CRHM in names(CRHM_var_OBS_col)) {

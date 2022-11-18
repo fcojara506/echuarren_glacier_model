@@ -17,6 +17,7 @@ meteo_data/CRHM_obs_data/obs_test_u.obs
 meteo_data/CRHM_obs_data/obs_test_t.obs
 meteo_data/CRHM_obs_data/obs_test_p.obs
 meteo_data/CRHM_obs_data/obs_test_rh.obs
+meteo_data/CRHM_obs_data/obs_test_h_snow.obs
 ######
 Dates:
 ######

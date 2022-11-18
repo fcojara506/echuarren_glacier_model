@@ -73,7 +73,8 @@ meteo_file_list = list.files(path = "meteo_data/VALLE ECHAURREN/",
 column_names = read.csv("meteo_data/VALLE ECHAURREN/nombre_columnas.csv")
 
 df_valle_echaurren = merge_files_to_columns(meteo_file_list,column_names) %>% 
-  cbind(precipitacion_invervalo_mm=c(0,diff(.$precipitacion_acum_mm))) 
+  cbind(precipitacion_invervalo_mm=c(0,diff(.$precipitacion_acum_mm))) %>% 
+  mutate(profundidad_nieve_m = profundidad_nieve_cm/10)
 
 # negative to zero
 df_valle_echaurren = df_valle_echaurren %>%
