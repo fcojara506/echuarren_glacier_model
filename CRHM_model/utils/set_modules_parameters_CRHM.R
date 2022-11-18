@@ -48,9 +48,9 @@ par_name_value = list(
   ##---------------------------------------------------------------
   ##                              obs                             -
   ##---------------------------------------------------------------
-  "tmax_allsnow" = 2.5, #default 0
-  "tmax_allrain" = 4,#default 4
-  "lapse_rate" = 0, #0 already defined through obs
+  "tmax_allsnow" = 3.4, #default 0
+  "tmax_allrain" = 4.5,#default 4
+  "lapse_rate" = 0, #temperature, 0: already defined through obs
   "ClimChng_precip" = 1, #default 1 #########
   "ClimChng_t" = 0,#default 0 ##########
   ##----------------------------------------------------------------
@@ -95,8 +95,9 @@ par_name_value = list(
   ##----------------------------------------------------------------
   ##                            SWESlope                           -
   ##----------------------------------------------------------------
+  "Disable_SWEslope"= 1, # 1 disable
   "Hd_min" = 50,
-  "snow_density" = 100,
+  "snow_density" = 200,
   "use_rho" = 1, #0: user defined density, 1: use Snobal
   ##----------------------------------------------------------------
   ##                        intcp                         -
@@ -119,14 +120,14 @@ par_name_value = list(
   "inhibit_bs" = 0 , #1 inhibit
   "inhibit_subl" = 0, #1 inhibit
   " distrib "  = 1, #default 0
-  "fetch" = 1500,
+  "fetch" = 1000,
   "N_S " = 1,
   ##----------------------------------------------------------------
   ##                          SnobalCRHM                           -
   ##----------------------------------------------------------------
   "hru_F_g" = 0, #fixed   
-  "hru_rho_snow" = 100,
-  "hru_T_g" = -2, #0.4 Michelle, -1.3, -4.7 Maria,
+  "hru_rho_snow" = 200,
+  "hru_T_g" = -4, #0.4 Michelle, -1.3, -4.7 Maria,
   "KT_sand" = 1.65, # default 0.08,
   "max_h2o_vol" = 0.001,# default 0.0001, 0.01 Michelle, 0.0015 Maria,
   "max_z_s_0" = 0.1,

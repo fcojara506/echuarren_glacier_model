@@ -131,4 +131,10 @@ df2 = create_obs_file_per_variable(
   interpolate_na = F
 )
 
-
+###
+library(CRHMr)
+prj_filename_in = "modelo_crhm_glaciar_echaurren.prj"
+data_path = "meteo_data/CRHM_obs_data/"
+setPrjObs(inputPrjFile = prj_filename_in,
+          obsFiles = paste0(data_path,list.files(path = data_path))
+)
