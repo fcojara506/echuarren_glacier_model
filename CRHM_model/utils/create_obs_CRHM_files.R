@@ -11,7 +11,8 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
                                          remove_negatives = T,
                                          date_init = as.character(as.Date(head(obs_matrix$datetime, 1))),
                                          date_end = as.character(as.Date(tail(obs_matrix$datetime, 1))),
-                                         output_filename=glue('meteo_data/CRHM_obs_data/obs_test_{meteo_CRHM_variable}.obs')
+                                         output_filename=glue('meteo_data/CRHM_obs_data/obs_test_{meteo_CRHM_variable}.obs'),
+                                         interpolate_na = T
                                          ) {
   ## date clearing
   asdates_obs = as.Date(obs_matrix$datetime)
@@ -42,6 +43,7 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
  #remove na columns
  df = df[,colSums(is.na(df)) < nrow(df)]
  
+ if (interpolate_na) {
  # interpolate na values
  df = CRHMr::interpolate(obs = df,
                          varcols = seq(1,ncol(df)-1),
@@ -49,6 +51,7 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
                          maxlength = 24*5,
                          quiet = T,
                          logfile = "")
+ }
  #remove negatives after interpolation
  if (remove_negatives) {
    df[df<0]=0
@@ -74,7 +77,7 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
 obs = readRDS(file = "meteo_data/obs_20221115.RDS")
 
 CRHM_var_OBS_col = list(
-  "p" = c("precipitacion_invervalo_mm"),
+  #"p" = c("precipitacion_invervalo_mm"),
   "u" = c("velocidad_viento_ms"),
   "Qli"= c("LW_incidente_wattm2"),
   "rh" = c("humedad_relativa_porcentaje"),
@@ -83,7 +86,7 @@ CRHM_var_OBS_col = list(
 )
 
 CRHM_var_OBS_num = list(
-  "p" = 1,
+  #"p" = 1,
   "u" = 1,
   "Qsi"= 48,
   "Qli"= 48,
@@ -114,3 +117,18 @@ df2 = create_obs_file_per_variable(
   remove_negatives = F,
   obs_matrix = tem
 )
+
+# ERA5 precipitation
+#temperature
+pERA5 = readRDS(file = "meteo_data/p_ERA5_20221115.RDS")
+
+df2 = create_obs_file_per_variable(
+  date_init = "2022-03-01",
+  date_end = "2022-11-01",
+  meteo_CRHM_variable = "p",
+  remove_negatives = F,
+  obs_matrix = pERA5,
+  interpolate_na = F
+)
+
+
