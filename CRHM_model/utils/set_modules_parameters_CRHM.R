@@ -51,7 +51,8 @@ par_name_value = list(
   "tmax_allsnow" = 2.5, #default 0
   "tmax_allrain" = 4,#default 4
   "lapse_rate" = 0, #already defined
-  "ClimChng_precip" = 10, #default 1
+  "ClimChng_precip" = 10, #default 1 #########
+  "ClimChng_t" = -5,#default 0 ##########
   ##----------------------------------------------------------------
   ##                            global                             -
   ##----------------------------------------------------------------
