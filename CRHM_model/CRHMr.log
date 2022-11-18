@@ -3748,3 +3748,4 @@
 2022-11-18_17:16:30 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrKstorage 
 2022-11-18_17:16:30 readPrjParameters prjFile: modelo_crhm_glaciar_echaurren.prj 
 2022-11-18_17:16:30 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj  paramName: ssrLag 
+2022-11-18_17:19:26 setObs input file:  modelo_crhm_glaciar_echaurren.prj  output file: modelo_crhm_glaciar_echaurren.prj 
