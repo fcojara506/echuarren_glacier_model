@@ -23,8 +23,7 @@ df[["xy"]] =
   )
 
 #compute area in km2 of each HRU
-df[["area_km2"]] = 
-  get_HRU_area(input_vector = "HRU_v2_1")
+df[["area_km2"]] = get_HRU_area(input_vector = "HRU_v2_1")
 
 # merge all properties in columns 
 df = Reduce(f = merge, x = df)

@@ -32,11 +32,11 @@ num_hru = 48
 a = CRHMr::readPrjParameters(prjFile = prj_filename_in,
                              paramName = "HRU_OBS")
 
-obs_order = c(seq(1, 48),
-              rep(1, 48),
-              rep(1, 48),
-              seq(1, 48),
-              seq(1, 48))
+obs_order = c(seq(1, num_hru),
+              rep(1, num_hru),
+              rep(1, num_hru),
+              seq(1, num_hru),
+              seq(1, num_hru))
 
 CRHMr::setPrjParameters(inputPrjFile = prj_filename_in,
                         paramName = "HRU_OBS",
@@ -81,10 +81,7 @@ par_name_value = list(
   ##                            netall                             -
   ##----------------------------------------------------------------
   #NAN
-  ##---------------------------------------------------------------
-  ##                            glacier                           -
-  ##---------------------------------------------------------------
-  
+
   ##----------------------------------------------------------------
   ##                              evap                             -
   ##----------------------------------------------------------------
@@ -99,6 +96,23 @@ par_name_value = list(
   "Hd_min" = 50,
   "snow_density" = 200,
   "use_rho" = 1, #0: user defined density, 1: use Snobal
+  ##---------------------------------------------------------------
+  ##                            glacier                           -
+  ##---------------------------------------------------------------
+  " Densification " = 0,
+  " Densification_550 " = 100,
+  " Densification_above_550 " = 100,
+  "firnLag" = 0,
+  "inhibit_firnmelt" = 0,
+  "inhibit_icenmelt" = 0,
+  "nfactor" = 0,
+  "SWELag" = 0,
+  "SWEstorage" = 0,
+  "SWE_to_firn_Julian" = 91,
+  "tfactor" = 0,
+  "topo_elev_init" = 0,
+  "Use_QnD" = 0,
+  "T_threshold" = 1,
   ##----------------------------------------------------------------
   ##                        intcp                         -
   ##----------------------------------------------------------------
