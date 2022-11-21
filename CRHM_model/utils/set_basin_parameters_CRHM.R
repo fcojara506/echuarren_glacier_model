@@ -52,7 +52,7 @@ for (parameter in names(list_parameter_colum)) {
 
 #set basin area as the sum of the HRU areas
 CRHMr::setPrjParameters(inputPrjFile = prj_filename,
-                        paramName = "basin_area",
+                        paramName = " basin_area ",
                         paramVals = sum(basin_df$area_km2))
 
 #set station elevation

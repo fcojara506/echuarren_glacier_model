@@ -114,9 +114,19 @@ par_name_value = list(
   "Use_QnD" = 0,
   "T_threshold" = 1,
   ##----------------------------------------------------------------
-  ##                        intcp                         -
+  ##                        CanopyClearing                         -
   ##----------------------------------------------------------------
-  #NAN
+  "Alpha_c" = 0.1,
+  "B_canopy" = 0.038,
+  " CanopyClearing " = 0,
+  "LAI" = 2.2,
+  "Ht" = 0.001,
+  "Sbar" = 6.6,
+  " unload_t " = 1,
+  " unload_t_water "= 4,
+  "Z0snow" = 0.001,
+  "Zref" = 2,
+  "Z_vent" = 0.75,
   ##----------------------------------------------------------------
   ##                        albedo_Richard                         -
   ##----------------------------------------------------------------
@@ -198,6 +208,7 @@ par_name_value = list(
 # set all the values in the list
 for (parameter in names(par_name_value)) {
   message(parameter)
+  message("Procesando...")
   set_unique_parameter(
     parameter_name = parameter,
     unique_value = par_name_value[[parameter]],
