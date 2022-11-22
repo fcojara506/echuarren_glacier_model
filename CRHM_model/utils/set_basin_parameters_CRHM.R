@@ -71,7 +71,7 @@ orden[index] = orden
 CRHMr::setPrjParameters(inputPrjFile = prj_filename,
                         paramName = " order ",
                         paramVals = orden)
-
+# routing order
 whereto_surface = c(
   4,
   3,
@@ -130,4 +130,12 @@ CRHMr::setPrjParameters(inputPrjFile = prj_filename,
 CRHMr::setPrjParameters(inputPrjFile = prj_filename,
                         paramName = " gwwhereto ",
                         paramVals = -whereto_surface)
+
+#set station elevation
+CRHMr::setPrjParameters(
+  inputPrjFile = prj_filename,
+  paramName = "route_S0",
+  paramVals = basin_df$pendiente_grados/90
+)
+
 

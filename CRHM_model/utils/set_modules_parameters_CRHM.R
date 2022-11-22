@@ -126,7 +126,7 @@ par_name_value = list(
   " unload_t_water "= 4,
   "Z0snow" = 0.001,
   "Zref" = 2,
-  "Z_vent" = 0.75,
+  "Zvent" = 0.75,
   ##----------------------------------------------------------------
   ##                        albedo_Richard                         -
   ##----------------------------------------------------------------
@@ -166,7 +166,7 @@ par_name_value = list(
   ##                      PrairieInfiltration                     -
   ##---------------------------------------------------------------
   "fallstat"=50,
-  "groudcover" = 1,#1:baresoil
+  "groundcover" = 1,#1:baresoil
   "infDays" = 6,
   "Major" = 5, #threshold for major melt (mm/d)
   "PriorInfiltration"=1,
@@ -175,33 +175,30 @@ par_name_value = list(
   ##                              Soil                             -
   ##----------------------------------------------------------------
   "cov_type" = 0, #0: no vegetation, 1:crop, 2: grasses
-  "gw_init" = 187,
-  "gw_max" = 375,
+  "gw_init" = 100,
+  "gw_max" = 2000,
   "Sdinit" = 0,
-  "soil_moist_init" = 187,
-  "soil_rechr_init" = 30,
+  "soil_moist_init" = 250,
+  "soil_rechr_init" = 10,
   "soil_ssr_runoff" = 0,
   "soil_withdrawal" = 3,
-  "Wetlands_scaling_factor" = -1,
+  "Wetlands_scaling_factor" = 1,
   ##----------------------------------------------------------------
   ##                          Netroute_M                           -
   ##----------------------------------------------------------------
   "Channel_shp" = 1,
-  "gwKstorage"= 0,# days
+  "gwKstorage"= 90,# 0 days
   "gwLag" = 0,
-  #"gwwhereto" = 0, ########## REVISAR
-  #"whereto" = 0, ########## REVISAR
   " Lag " = 0,
   "preferential_flow" = 0,
   "route_L" = 200,#metros ###REVISAR
   "route_n" = 0.025,
   "route_R" = 0.5,
-  "route_S0"= 0.2, ### REVISAR
   "route_X_M" = 0.25,
   "runKstorage" = 0,
   "runLag" = 0,
   "Sd_ByPass" = 0,
-  "ssrKstorage" = 5,
+  "ssrKstorage" = 20, #default 5
   "ssrLag" = 0
 )
 
