@@ -170,7 +170,7 @@ par_name_value = list(
   "infDays" = 6,
   "Major" = 5, #threshold for major melt (mm/d)
   "PriorInfiltration"=1,
-  "texture" = 4, ##########3 revisar
+  "texture" = 1, ##########3 revisar
   ##----------------------------------------------------------------
   ##                              Soil                             -
   ##----------------------------------------------------------------
@@ -178,8 +178,8 @@ par_name_value = list(
   "gw_init" = 100,
   "gw_max" = 1000,
   "Sdinit" = 0,
-  "soil_moist_init" = 250,
-  "soil_rechr_init" = 10,
+  "soil_moist_init" = 100,
+  "soil_rechr_init" = 100,
   "soil_ssr_runoff" = 0,
   "soil_withdrawal" = 3,
   "Wetlands_scaling_factor" = 1,
