@@ -176,7 +176,7 @@ par_name_value = list(
   ##----------------------------------------------------------------
   "cov_type" = 0, #0: no vegetation, 1:crop, 2: grasses
   "gw_init" = 100,
-  "gw_max" = 2000,
+  "gw_max" = 1000,
   "Sdinit" = 0,
   "soil_moist_init" = 250,
   "soil_rechr_init" = 10,
@@ -187,7 +187,7 @@ par_name_value = list(
   ##                          Netroute_M                           -
   ##----------------------------------------------------------------
   "Channel_shp" = 1,
-  "gwKstorage"= 90,# 0 days
+  "gwKstorage"= 0,# 0 days
   "gwLag" = 0,
   " Lag " = 0,
   "preferential_flow" = 0,
@@ -198,7 +198,7 @@ par_name_value = list(
   "runKstorage" = 0,
   "runLag" = 0,
   "Sd_ByPass" = 0,
-  "ssrKstorage" = 20, #default 5
+  "ssrKstorage" = 5, #default 5, Maria 20
   "ssrLag" = 0
 )
 
