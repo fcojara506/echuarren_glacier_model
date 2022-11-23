@@ -843,6 +843,7 @@ MS_time
 ######
 Display_Variable:
 ######
+SnobalCRHM SWE 1 48
 Netroute_M basinflow 1
 Netroute_M basingw 1
 ######
@@ -858,3 +859,6 @@ Log_All
 TChart:
 ######
 Hola
+ 
+ 
+ 
