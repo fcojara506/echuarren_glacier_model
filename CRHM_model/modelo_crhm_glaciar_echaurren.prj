@@ -17,7 +17,6 @@ meteo_data/CRHM_obs_data/obs_test_rh.obs
 meteo_data/CRHM_obs_data/obs_test_Qsi.obs
 meteo_data/CRHM_obs_data/obs_test_Qli.obs
 meteo_data/CRHM_obs_data/obs_test_p.obs
-meteo_data/CRHM_obs_data/obs_test_h_snow.obs
 ######
 Dates:
 ######
@@ -29,13 +28,12 @@ Modules:
 basin CRHM 02/24/12
 global CRHM 12/19/19
 obs CRHM 04/17/18
-K_Estimate CRHM 01/16/18
-calcsun CRHM 10/01/13
-Slope_Qsi CRHM 07/14/11
-longVt#3 CRHM 02/10/16
+Slope_Qsi#1 CRHM 07/14/11
+longVt CRHM 02/10/16
+calcsun#3 CRHM 10/01/13
 netall CRHM 03/22/16
 evap CRHM 09/26/13
-CanopyClearing#1 CRHM 04/05/19
+CanopyClearing#3 CRHM 04/05/19
 albedo_Richard CRHM 03/19/15
 pbsmSnobal CRHM 01/05/17
 glacier CRHM 07/02/20
