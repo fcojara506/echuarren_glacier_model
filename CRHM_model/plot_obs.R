@@ -1,4 +1,5 @@
 rm(list = ls())
+
 library(dplyr)
 library(data.table)
 
@@ -16,13 +17,21 @@ a=lapply(observaciones , readRDS) %>% rbindlist() %>%
 
 library(ggplot2)
 library(scales)
-ggplot(data = a)+
+p = ggplot(data = a)+
   geom_line(aes(x = datetime,
                 y = value,
                 col = elevacion_msnm,
                 group= elevacion_msnm ))+
   scale_x_datetime(labels = date_format("%b"),
                    date_breaks = "1 months")+
-  facet_wrap(~var,scales = "free_y")+
+  facet_wrap(~var,scales = "free_y",ncol=1)+
   labs(x = "fecha (2022)",
        col = "elevación (m)")
+
+ggsave(filename = paste0("CRHM_model_output/figuras/","obs_hru",".png"),
+       plot = p,
+       width = 7,
+       height = 10,
+       dpi = 400)
+
+
