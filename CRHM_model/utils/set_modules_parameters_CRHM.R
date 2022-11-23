@@ -21,7 +21,7 @@ set_unique_parameter <- function(parameter_name = "Ht",
 source("utils/set_basin_parameters_CRHM.R")
 
 #set a unique value for each HRU
-prj_filename_in = "modelo_crhm_glaciar_echaurren.prj"
+prj_filename_in = "modelo_crhm_glaciar_echaurren_v2.prj"
 num_hru = 48
 
 ##---------------------------------------------------------------

@@ -75,7 +75,7 @@ par_name_value = list(
 
 
 #set a unique value for each HRU
-prj_filename_in = "modelo_crhm_glaciar_echaurren.prj"
+prj_filename_in = "modelo_crhm_glaciar_echaurren_v2.prj"
 num_layers = 3
 index_matrix_type = set_glacier_type_HRU()
 # set all the values in the list

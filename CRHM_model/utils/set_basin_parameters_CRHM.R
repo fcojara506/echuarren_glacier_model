@@ -1,7 +1,7 @@
 library(CRHMr)
 library(dplyr)
 
-prj_filename = "modelo_crhm_glaciar_echaurren.prj"
+prj_filename = "modelo_crhm_glaciar_echaurren_v2.prj"
 basin_df = read.csv2(file = "basin_data/HRU_basin_properties.csv")
 
 set_new_parameters <- function(prj_filename,
