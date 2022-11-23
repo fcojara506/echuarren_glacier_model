@@ -17,7 +17,6 @@ meteo_data/CRHM_obs_data/obs_test_rh.obs
 meteo_data/CRHM_obs_data/obs_test_Qsi.obs
 meteo_data/CRHM_obs_data/obs_test_Qli.obs
 meteo_data/CRHM_obs_data/obs_test_p.obs
-meteo_data/CRHM_obs_data/obs_test_h_snow.obs
 ######
 Dates:
 ######
@@ -652,7 +651,7 @@ Display_Variable:
 ######
 Netroute_M basinflow 1
 Netroute_M basingw 1
-SnobalCRHM SWE 1
+SnobalCRHM SWE 1 48
 ######
 Display_Observation:
 ######

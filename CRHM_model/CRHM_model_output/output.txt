@@ -1,2 +1,0 @@
-time	SWE(1)	SWE(48)	basinflow(1)	basingw(1)
-units	(kg/m^2)	(kg/m^2)	(m^3/int)	(m^3/int)
