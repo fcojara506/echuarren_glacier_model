@@ -30,8 +30,8 @@ p = ggplot(data = a)+
 
 ggsave(filename = paste0("CRHM_model_output/figuras/","obs_hru",".png"),
        plot = p,
-       width = 7,
-       height = 10,
-       dpi = 400)
+       width = 10,
+       height = 8,
+       dpi = 600)
 
 

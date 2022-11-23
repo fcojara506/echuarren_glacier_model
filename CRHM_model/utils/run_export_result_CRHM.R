@@ -40,7 +40,10 @@ variables = c("hru_t",
               "hru_rh",
               "hru_u")
 
-sapply(variables, export_obs)
+sapply(variables, function(x) export_obs(x,modulo = "obs"))
+
+variables = c("SWE")
+sapply(variables, function(x) export_obs(x,modulo = "obs"))
 
 #label_y= "temperatura del aire (°C)"
 
