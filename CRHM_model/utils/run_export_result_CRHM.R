@@ -19,9 +19,9 @@ run_CRHM_output(output_filename = paste0(output_name,".txt"))
 a=CRHMr::readOutputFile(outputFile = paste0("CRHM_model_output/",output_name,".txt"),
                         timezone = 'etc/GMT+4')
 library(tidyr)
-#b = head(a,-24)
+b = head(a,-24)
 
-c = reshape2::melt(a,id.vars = "datetime") %>% 
+c = reshape2::melt(b,id.vars = "datetime") %>% 
   separate(variable,c("var","HRU"),
            sep = paste0(variable_modulo,".")) %>% 
   mutate(var = variable_modulo)
@@ -40,10 +40,13 @@ variables = c("hru_t",
               "hru_rh",
               "hru_u")
 
-sapply(variables, function(x) export_obs(x,modulo = "obs"))
+#sapply(variables, function(x) export_obs(x,modulo = "obs"))
 
 variables = c("SWE")
-sapply(variables, function(x) export_obs(x,modulo = "obs"))
+sapply(variables, function(x) export_obs(x,modulo = "SnobalCRHM"))
+
+variables = c("Albedo")
+sapply(variables, function(x) export_obs(x,modulo = "albedo_Richard"))
 
 #label_y= "temperatura del aire (°C)"
 
