@@ -1,0 +1,12 @@
+2022-11-24_00:05:14 readObsFile obsFile:obs_test_p.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:05:17 readObsFile obsFile:obs_test_Qli.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:05:18 readObsFile obsFile:obs_test_Qsi.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:05:20 readObsFile obsFile:obs_test_rh.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:05:22 readObsFile obsFile:obs_test_t.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:05:23 readObsFile obsFile:obs_test_u.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:26 readObsFile obsFile:obs_test_p.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:28 readObsFile obsFile:obs_test_Qli.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:30 readObsFile obsFile:obs_test_Qsi.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:32 readObsFile obsFile:obs_test_rh.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:33 readObsFile obsFile:obs_test_t.obs datetype:discrete timezone:etc/GMT+4 
+2022-11-24_00:07:34 readObsFile obsFile:obs_test_u.obs datetype:discrete timezone:etc/GMT+4 

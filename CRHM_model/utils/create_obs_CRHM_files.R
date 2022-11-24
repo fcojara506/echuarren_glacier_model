@@ -22,7 +22,7 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
   }
   # end date
   if (date_end != as.character(tail(asdates_obs, 1)) ) {
-    date_end = min(date_end, as.character(tail(asdates_obs, 1)))
+    date_end = date_end#min(date_end, as.character(tail(asdates_obs, 1)))
   }
   
   #empty dataframe
@@ -39,18 +39,23 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
             y = obs_matrix,
             by="datetime",
             all.x = T)
- 
+
  #remove na columns
  df = df[,colSums(is.na(df)) < nrow(df)]
  
  if (interpolate_na) {
+   
+   if (meteo_CRHM_variable == "p") {
+     df[is.na(df)] <- 0
+   }else{
  # interpolate na values
  df = CRHMr::interpolate(obs = df,
                          varcols = seq(1,ncol(df)-1),
                          methods = "linear",
-                         maxlength = 24*5,
+                         maxlength = 24*10,
                          quiet = T,
                          logfile = "")
+   }
  }
  #remove negatives after interpolation
  if (remove_negatives) {
@@ -74,15 +79,15 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
 }
 
 #read observation data
-obs = readRDS(file = "meteo_data/obs_20221115.RDS")
+obs = readRDS(file = "meteo_data/obs_20221123.RDS")
 
 CRHM_var_OBS_col = list(
   #"p" = c("precipitacion_invervalo_mm"),
   "u" = c("velocidad_viento_ms"),
   "Qli"= c("LW_incidente_wattm2"),
   "rh" = c("humedad_relativa_porcentaje"),
-  "Qsi"= c("SW_incidente_wattm2"),
-  "h_snow" = c("profundidad_nieve_m")
+  "Qsi"= c("SW_incidente_wattm2")
+  #"h_snow" = c("profundidad_nieve_m")
 )
 
 CRHM_var_OBS_num = list(
@@ -90,15 +95,14 @@ CRHM_var_OBS_num = list(
   "u" = 1,
   "Qsi"= 48,
   "Qli"= 48,
-  "rh" = 48,
-  "h_snow" = 1
+  "rh" = 48
 )
 
 for (var_CRHM in names(CRHM_var_OBS_col)) {
   
 df = create_obs_file_per_variable(
-  date_init = "2022-03-01",
-  date_end = "2022-11-01",
+  date_init = "2016-04-01",
+  date_end = "2022-11-05",
   meteo_CRHM_variable = var_CRHM,
   remove_negatives = ifelse(var_CRHM=="t",F,T),
   obs_matrix = obs[,c("datetime",rep(CRHM_var_OBS_col[[var_CRHM]],
@@ -108,11 +112,11 @@ df = create_obs_file_per_variable(
 }
 
 #temperature
-tem = readRDS(file = "meteo_data/tem_20221115.RDS")
+tem = readRDS(file = "meteo_data/tem_20221123.RDS")
 
-df2 = create_obs_file_per_variable(
-  date_init = "2022-03-01",
-  date_end = "2022-11-01",
+df1 = create_obs_file_per_variable(
+  date_init = "2016-04-01",
+  date_end = "2022-11-05",
   meteo_CRHM_variable = "t",
   remove_negatives = F,
   obs_matrix = tem
@@ -120,24 +124,30 @@ df2 = create_obs_file_per_variable(
 
 # ERA5 precipitation
 #temperature
-pERA5 = readRDS(file = "meteo_data/p_ERA5_20221115.RDS")
+pERA5 = readRDS(file = "meteo_data/p_ERA5_20221123.RDS")
 
 df2 = create_obs_file_per_variable(
-  date_init = "2022-03-01",
-  date_end = "2022-11-01",
+  date_init = "2016-04-01",
+  date_end = "2022-11-05",
   meteo_CRHM_variable = "p",
-  remove_negatives = F,
+  remove_negatives = T,
   obs_matrix = pERA5,
-  interpolate_na = F
+  interpolate_na = T
 )
 
 ###
 library(CRHMr)
-#project filename
-prj_filename_in = "modelo_crhm_glaciar_echaurren.prj"
+#project filename 
+prj_filename_in = "modelo_crhm_glaciar_echaurren_v2.prj"
 #path to meteorological data CRHM .obs objects
 data_path = "meteo_data/CRHM_obs_data/"
 
 setPrjObs(inputPrjFile = prj_filename_in,
-          obsFiles = paste0(data_path,list.files(path = data_path)%>% sort(decreasing = T))
+          obsFiles = paste0(data_path,list.files(path = data_path,pattern = ".obs") %>%
+                              sort(decreasing = T))
 )
+#summary csv
+CRHMr::summariseObsFiles(
+  file.dir = data_path,
+  timezone = "etc/GMT+4")
+

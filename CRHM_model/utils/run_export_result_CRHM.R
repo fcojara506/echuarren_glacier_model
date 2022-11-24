@@ -9,7 +9,8 @@ export_obs <- function(variable_modulo,modulo = "obs") {
   
 prj_filename = "modelo_crhm_glaciar_echaurren_v2.prj"
 # run
-setPrjDates(inputPrjFile = prj_filename,startDate = '2022 3 1', endDate = '2022 11 1')  
+setPrjDates(inputPrjFile = prj_filename,
+            startDate = '2016 4 1', endDate = '2022 11 5')  
 
 output_name = paste(modulo,variable_modulo,sep="_")
 set_output_variables(prj_filename = prj_filename,

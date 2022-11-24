@@ -35,6 +35,31 @@ merge_files_to_columns <- function(meteo_file_list,column_names) {
                                   format="%d/%m/%Y %H:%M:%S",
                                   tz="etc/GMT+4")) %>% 
     arrange(datetime)
+
+  
   
   return(df)
 }
+
+read_filename_10m_to_hourly <- function(filename = "meteo_data/VALLE ECHAURREN/Valle Echaurren Histórico/Valle_Echaurren_historico_2014_2020.csv") {
+  
+  df = read.csv(file = filename,sep = ",") %>% 
+    #change datetime format
+    mutate(datetime =  as.POSIXct(datetime,
+                                  format="%Y/%m/%d %H:%M",
+                                  tz="etc/GMT+4")) %>% 
+    arrange(datetime)
+  df = df[!duplicated(df), ]
+  df = df[lubridate::year(df$datetime)>2013,]
+  df$datetime =  lubridate::ceiling_date(x = df$datetime, unit="hour")
+  
+    df_hourly = aggregate(
+      x = df,
+      by = list(df$datetime),
+      FUN = mean) %>% 
+      select(-datetime) %>% 
+    rename(datetime = Group.1) %>%
+      mutate(datetime = as.POSIXct(datetime))
+  return(df_hourly)
+  }
+

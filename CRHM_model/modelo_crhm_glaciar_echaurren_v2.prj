@@ -20,8 +20,8 @@ meteo_data/CRHM_obs_data/obs_test_p.obs
 ######
 Dates:
 ######
-2022 3 1
-2022 11 1
+2016 4 1
+2022 11 5
 ######
 Modules:
 ######
@@ -659,11 +659,6 @@ LOGVARLOAD
 ######
 Display_Variable:
 ######
-<<<<<<< Updated upstream
-albedo_Richard Albedo 1
-SnobalCRHM SWE 1 48
-albedo_Richard Albedo 48
-=======
 albedo_Richard
 Albedo
 1
@@ -714,7 +709,6 @@ Albedo
 46
 47
 48
->>>>>>> Stashed changes
 ######
 Display_Observation:
 ######
