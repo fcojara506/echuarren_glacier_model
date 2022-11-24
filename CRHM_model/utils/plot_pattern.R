@@ -33,7 +33,7 @@ p = ggplot(data = df)+
        col = "elevación (m)",
        y = "")
 
-ggsave(filename = paste0("CRHM_model_output/figuras/",paste(vars,collapse = "|"),".png"),
+ggsave(filename = paste0("CRHM_model_output/figuras/",paste(vars,collapse = "_"),".png"),
        plot = p,
        width = 10,
        height = 8,

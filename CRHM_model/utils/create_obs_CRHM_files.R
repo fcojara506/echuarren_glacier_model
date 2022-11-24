@@ -62,6 +62,17 @@ create_obs_file_per_variable <- function(meteo_CRHM_variable = "t",
    df[df<0]=0
  }
  
+ if (F) {
+   
+   #df_1=df[df$datetime %between% c(as.Date("2016-04-02"),as.Date("2016-12-20")),]
+   #df_2=df[df$datetime %between% c(as.Date("2021-04-01"),as.Date("2021-12-15")),]
+   
+   #df_1_1=df[df$datetime %between% c(as.Date("2019-04-02"),as.Date("2019-12-20")),]
+   #df_2_1=df[df$datetime %between% c(as.Date("2021-04-01"),as.Date("2021-12-15")),]
+   
+   #length(which(is.na(df_1[,2])))
+   #length(which(is.na(df_1_1[,2])))
+   }
  #define column names
  names(df) = names(obs_crhm)
  
@@ -106,9 +117,10 @@ df = create_obs_file_per_variable(
   meteo_CRHM_variable = var_CRHM,
   remove_negatives = ifelse(var_CRHM=="t",F,T),
   obs_matrix = obs[,c("datetime",rep(CRHM_var_OBS_col[[var_CRHM]],
-                                     CRHM_var_OBS_num[[var_CRHM]]))]
+                                     CRHM_var_OBS_num[[var_CRHM]]))],
+  interpolate_na = T
   )
-
+print(max(df[which(is.na(df[,2])),1]))
 }
 
 #temperature
@@ -119,8 +131,10 @@ df1 = create_obs_file_per_variable(
   date_end = "2022-11-05",
   meteo_CRHM_variable = "t",
   remove_negatives = F,
-  obs_matrix = tem
+  obs_matrix = tem,
+  interpolate_na = T
 )
+max(df1[which(is.na(df1$t.1)),1])
 
 # ERA5 precipitation
 #temperature
@@ -134,7 +148,7 @@ df2 = create_obs_file_per_variable(
   obs_matrix = pERA5,
   interpolate_na = T
 )
-
+#max(df2[which(is.na(df2$p.1)),1])
 ###
 library(CRHMr)
 #project filename 
