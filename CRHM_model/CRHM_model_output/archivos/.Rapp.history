@@ -1,1 +1,2 @@
 load("/Users/fco/Documents/GitHub/echuarren_glacier_model/CRHM_model/CRHM_model_output/archivos/albedo_Richard_Albedo.RDS")
+load("/Users/fco/Documents/GitHub/echuarren_glacier_model/CRHM_model/CRHM_model_output/archivos/SnobalCRHM_SWE.RDS")

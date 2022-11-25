@@ -85,8 +85,8 @@ par_name_value = list(
   ##----------------------------------------------------------------
   ##                              evap                             -
   ##----------------------------------------------------------------
-  "evap_type" = 2,# 0:Granger, 1:Priestley-Taylor, 2:Penman-Monteith
-  "F_Qg" = 0,#default 0.1,
+  "evap_type" = 0,# 0:Granger, 1:Priestley-Taylor, 2:Penman-Monteith
+  "F_Qg" = 0.1,#default 0.1,
   " rs " = 0, #water :0
   "Zwind" = 2.5,
   ##----------------------------------------------------------------
@@ -179,15 +179,15 @@ par_name_value = list(
   "gw_max" = 1000,
   "Sdinit" = 0,
   "soil_moist_init" = 250,
-  "soil_rechr_init" = 0,
-  "soil_ssr_runoff" = 0,
+  "soil_rechr_init" = 10,
+  "soil_ssr_runoff" = 1,
   "soil_withdrawal" = 3,
   "Wetlands_scaling_factor" = 1,
   ##----------------------------------------------------------------
   ##                          Netroute_M                           -
   ##----------------------------------------------------------------
   "Channel_shp" = 1,
-  "gwKstorage"= 0,# 0 days
+  "gwKstorage"= 100,# 0 days
   "gwLag" = 0,
   " Lag " = 0,
   "preferential_flow" = 0,

@@ -20,9 +20,9 @@ run_CRHM_output(output_filename = paste0(output_name,".txt"))
 a=CRHMr::readOutputFile(outputFile = paste0("CRHM_model_output/",output_name,".txt"),
                         timezone = 'etc/GMT+4')
 library(tidyr)
-b = head(a,-24)
+#b = head(a,-24)
 
-c = reshape2::melt(b,id.vars = "datetime") %>% 
+c = reshape2::melt(a,id.vars = "datetime") %>% 
   separate(variable,c("var","HRU"),
            sep = paste0(variable_modulo,".")) %>% 
   mutate(var = variable_modulo)
@@ -33,42 +33,48 @@ saveRDS(object = c,
 return(c)
 }
 
-variables = c("hru_t",
-              "hru_ea",
-              "hru_p",
-              "hru_snow",
-              "hru_rain",
-              "hru_rh",
-              "hru_u")
-
+# #soil
+# variables = c("soil_moist","gw")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Soil"))
+# 
+# variables = c("hru_t",
+#               "hru_p",
+#               "hru_snow",
+#               "hru_rain",
+#               "hru_rh",
+#               "hru_u"
+#               )
+#
 #sapply(variables, function(x) export_obs(x,modulo = "obs"))
 
-variables = c("SWE")
-sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
 
-variables = c("Albedo")
-sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "albedo_Richard"))
-
-#label_y= "temperatura del aire (°C)"
-
-#basin_df = read.csv2(file = "basin_data/HRU_basin_properties.csv")
-#d = merge(c,basin_df,by = "HRU")
-
-# library(ggplot2)
-# library(scales)
-# ggplot(data = d)+
-#   geom_line(aes(x = datetime,
-#                 y = value,
-#                 col = elevacion_msnm,
-#                 group= elevacion_msnm ))+
-#   scale_x_datetime(labels = date_format("%b"),
-#                    date_breaks = "1 months")+
-#   labs(x = "fecha (2022)",
-#        y = label_y,
-#        col = "elevación (m)")
+# variables = c("Albedo")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "albedo_Richard"))
 # 
-# ggsave(filename = paste0("CRHM_model_output/figuras/",output_name,".png"),
-#        width = 7,
-#        height = 2,
-#        dpi = 400)
+# #CanopyClearing
+# variables=c("net_p","net_snow","net_rain")
+# sapply(variables, function(x) export_obs(variable_modulo = x,
+#                                          modulo = "CanopyClearing"))
 
+
+## evap
+variables = c("hru_actet")
+sapply(variables, function(x) export_obs(variable_modulo = x,
+                                         modulo = "evap"))
+
+# # some mass balance variables
+# variables = c("E_s_int","SWE","rho","snowmelt_int")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
+# #more mass balance variables
+# variables = c("hru_subl","hru_drift")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "pbsmSnobal"))
+# 
+# # routing
+# variables = c("runoutflow","ssroutflow","gwoutflow")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Netroute_M"))
+# 
+# #energy balance
+# variables = c("G","H","L_v_E","M","R_n","delta_Q")
+# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
+# 
+# # 
