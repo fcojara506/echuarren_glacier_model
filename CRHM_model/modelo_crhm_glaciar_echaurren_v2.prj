@@ -670,8 +670,8 @@ LOGVARLOAD
 ######
 Display_Variable:
 ######
-evap
-hru_actet
+glacier
+firn
 1
 2
 3

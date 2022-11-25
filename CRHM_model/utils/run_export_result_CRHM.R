@@ -33,10 +33,10 @@ saveRDS(object = c,
 return(c)
 }
 
-# #soil
-# variables = c("soil_moist","gw")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Soil"))
-# 
+#soil
+variables = c("soil_moist","gw")
+sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Soil"))
+
 # variables = c("hru_t",
 #               "hru_p",
 #               "hru_snow",
@@ -44,37 +44,35 @@ return(c)
 #               "hru_rh",
 #               "hru_u"
 #               )
-#
 #sapply(variables, function(x) export_obs(x,modulo = "obs"))
+#variables = c("Albedo")
+#sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "albedo_Richard"))
 
+#CanopyClearing
+variables=c("net_p","net_snow","net_rain")
+sapply(variables, function(x) export_obs(variable_modulo = x,
+                                         modulo = "CanopyClearing"))
+# some mass balance variables
+variables = c("E_s_int","SWE","rho","snowmelt_int")
+sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
+#more mass balance variables
+variables = c("hru_subl","hru_drift")
+sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "pbsmSnobal"))
 
-# variables = c("Albedo")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "albedo_Richard"))
-# 
-# #CanopyClearing
-# variables=c("net_p","net_snow","net_rain")
-# sapply(variables, function(x) export_obs(variable_modulo = x,
-#                                          modulo = "CanopyClearing"))
+# routing
+variables = c("runoutflow","ssroutflow","gwoutflow")
+sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Netroute_M"))
 
+#energy balance
+variables = c("G","H","L_v_E","M","R_n","delta_Q")
+sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
 
 ## evap
 variables = c("hru_actet")
 sapply(variables, function(x) export_obs(variable_modulo = x,
                                          modulo = "evap"))
+#glacier
+variables = c("glacier_Albedo","glacier_Surf","ice","firn")
+sapply(variables, function(x) export_obs(variable_modulo = x,
+                                         modulo = "glacier"))
 
-# # some mass balance variables
-# variables = c("E_s_int","SWE","rho","snowmelt_int")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
-# #more mass balance variables
-# variables = c("hru_subl","hru_drift")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "pbsmSnobal"))
-# 
-# # routing
-# variables = c("runoutflow","ssroutflow","gwoutflow")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "Netroute_M"))
-# 
-# #energy balance
-# variables = c("G","H","L_v_E","M","R_n","delta_Q")
-# sapply(variables, function(x) export_obs(variable_modulo = x,modulo = "SnobalCRHM"))
-# 
-# # 

@@ -20,8 +20,8 @@ date_range = c(as.Date("2016-04-02"),
 ) {
   
   list_snow = c(
-    "CanopyClearing_net_snow",
-    "CanopyClearing_net_rain",
+    "obs_hru_snow",
+    "obs_hru_rain",
     "evap_hru_actet",
     "SnobalCRHM_E_s_int",
     "pbsmSnobal_hru_subl",
@@ -30,7 +30,9 @@ date_range = c(as.Date("2016-04-02"),
   
   list_soil = c(
     "Soil_soil_moist",
-    "Soil_gw"
+    "Soil_gw",
+    "SnobalCRHM_SWE",
+    "glacier_ice" #,"fern"
   )
   
   list_flows = c(
@@ -102,10 +104,17 @@ ls_2022 =
   )) %>% rbindlist()
 
 library(ggplot2)
-ggplot(data = ls_2022,
+p=ggplot(data = ls_2022,
        aes(x = datetime,
            y = var_sum))+
   geom_line()+
-  facet_wrap(~var,scales = "free_y")
+  facet_wrap(~var,
+             scales = "free_y",
+             ncol=1)
 
+ggsave(filename = "balance_masa.png",
+       plot = p,
+       width = 5,
+       height = 10,
+       dpi = 500)
 
