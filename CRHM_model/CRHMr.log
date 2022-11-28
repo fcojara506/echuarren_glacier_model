@@ -1,0 +1,72 @@
+2022-11-28_11:11:34 makeRegular obs:output 
+2022-11-28_11:11:35 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_11:30:09 makeRegular obs:output 
+2022-11-28_11:30:10 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_11:31:12 makeRegular obs:output 
+2022-11-28_11:31:13 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_11:35:50 makeRegular obs:output 
+2022-11-28_11:35:51 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_11:58:20 makeRegular obs:output 
+2022-11-28_11:58:21 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_12:05:39 makeRegular obs:output 
+2022-11-28_12:05:41 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_12:20:14 makeRegular obs:output 
+2022-11-28_12:20:17 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_12:22:38 makeRegular obs:output 
+2022-11-28_12:22:45 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_12:33:41 makeRegular obs:output 
+2022-11-28_12:33:43 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_13:31:01 makeRegular obs:output 
+2022-11-28_13:31:02 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_13:31:52 makeRegular obs:output 
+2022-11-28_13:31:54 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: Elev_Adj_glacier_surf 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: firnstorage 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: firn_Albedo 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: firn_dens_init 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: firn_h_init 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: inhibit_firnmelt 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: inhibit_icenmelt 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: iceLag 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: icestorage 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: ice_Albedo 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: ice_dens 
+2022-11-28_15:29:42 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: SWEAA 
+2022-11-28_15:29:43 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: TKMA 
+2022-11-28_15:29:43 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: use_debris 
+2022-11-28_15:29:43 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: debris_h 
+2022-11-28_15:29:43 setPrjPrameters input file:  modelo_crhm_glaciar_echaurren_v21.prj  output file: modelo_crhm_glaciar_echaurren_v21.prj  paramName: ice_init 
+2022-11-28_15:56:19 makeRegular obs:output 
+2022-11-28_15:56:20 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_15:59:04 makeRegular obs:output 
+2022-11-28_15:59:04 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_15:59:27 makeRegular obs:output 
+2022-11-28_15:59:28 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_16:03:02 makeRegular obs:output 
+2022-11-28_16:03:03 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_16:04:21 makeRegular obs:output 
+2022-11-28_16:04:21 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_16:08:59 makeRegular obs:output 
+2022-11-28_16:08:59 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_16:17:55 makeRegular obs:output 
+2022-11-28_16:17:56 readOutputFile outputFile:CRHM_output_1.txt Timezone:etc/GMT+4 
+2022-11-28_16:18:20 makeRegular obs:output 
+2022-11-28_16:18:20 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_16:18:59 makeRegular obs:output 
+2022-11-28_16:19:00 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_16:33:07 makeRegular obs:output 
+2022-11-28_16:33:08 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_16:34:12 makeRegular obs:output 
+2022-11-28_16:34:13 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_16:49:55 makeRegular obs:output 
+2022-11-28_16:49:56 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_17:23:25 makeRegular obs:output 
+2022-11-28_17:23:25 readOutputFile outputFile:CRHM_output_10.txt Timezone:etc/GMT+4 
+2022-11-28_17:25:37 makeRegular obs:output 
+2022-11-28_17:25:39 readOutputFile outputFile:CRHM_output_2.txt Timezone:etc/GMT+4 
+2022-11-28_17:34:42 makeRegular obs:output 
+2022-11-28_17:34:43 readOutputFile outputFile:CRHM_output_2.txt Timezone:etc/GMT+4 
+2022-11-28_17:37:10 makeRegular obs:output 
+2022-11-28_17:37:11 readOutputFile outputFile:CRHM_output_2.txt Timezone:etc/GMT+4 
+2022-11-28_17:46:41 makeRegular obs:output 
+2022-11-28_17:46:44 readOutputFile outputFile:CRHM_output_2.txt Timezone:etc/GMT+4 
