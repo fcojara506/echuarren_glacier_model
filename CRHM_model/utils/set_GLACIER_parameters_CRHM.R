@@ -67,15 +67,15 @@ par_name_value = list(
 "ice_dens" = c(1000,950,950),
 "SWEAA" = c(0.3,0.5,0.5),
 "TKMA" = c(5,-1,-1),
-"use_debris" = c(0,1,1),
-"debris_h" = c(0,0.1,0.4)
+"use_debris" = c(0,0,1),
+"debris_h" = c(0,0,0.4)
 )
 
 
 
 
 #set a unique value for each HRU
-prj_filename_in = "modelo_crhm_glaciar_echaurren_v2.prj"
+prj_filename_in = "modelo_crhm_glaciar_echaurren_v21.prj"
 num_layers = 3
 index_matrix_type = set_glacier_type_HRU()
 # set all the values in the list
