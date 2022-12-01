@@ -56,7 +56,7 @@ p=ggplot(data = df3,
            y = var_sum)
 )+
   geom_line()+
-  facet_wrap(~var,
+  facet_wrap(~var, 
              labeller = labeller(var = la))+
   labs(
     x = "",

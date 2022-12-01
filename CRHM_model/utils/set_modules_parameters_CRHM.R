@@ -64,6 +64,7 @@ par_name_value = list(
   "Ks_lower" = 6.9E-6,
   "Ks_upper" = 6.9E-6,
   "PSD" = 0.252,
+  
   ##---------------------------------------------------------------
   ##                            calcsun                           -
   ##---------------------------------------------------------------
@@ -87,8 +88,8 @@ par_name_value = list(
   ##----------------------------------------------------------------
   "evap_type" = 0,# 0:Granger, 1:Priestley-Taylor, 2:Penman-Monteith
   "F_Qg" = 0.1,#default 0.1,
-  " rs " = 0, #water :0
   "Zwind" = 2.5,
+  "inhibit_evap"=1,#0
   ##----------------------------------------------------------------
   ##                            SWESlope                           -
   ##----------------------------------------------------------------
@@ -103,8 +104,8 @@ par_name_value = list(
   " Densification_550 " = 100,
   " Densification_above_550 " = 100,
   "firnLag" = 0,
-  "inhibit_firnmelt" = 0,
-  "inhibit_icenmelt" = 0,
+  "inhibit_firnmelt" = 1, #default 0
+  "inhibit_icenmelt" = 1, #default 0
   "nfactor" = 0,
   "SWELag" = 0,
   "SWEstorage" = 0,
@@ -118,10 +119,8 @@ par_name_value = list(
   ##----------------------------------------------------------------
   "Alpha_c" = 0.1,
   "B_canopy" = 0.038,
-  " CanopyClearing " = 0,
+  
   "LAI" = 2.2,
-  "Ht" = 0.001,
-  "Sbar" = 6.6,
   " unload_t " = 1,
   " unload_t_water "= 4,
   "Z0snow" = 0.001,
@@ -141,8 +140,8 @@ par_name_value = list(
   ##                          pbsmSnobal                           -
   ##----------------------------------------------------------------
   "A_S" = 0.003,
-  "inhibit_bs" = 0 , #1 inhibit
-  "inhibit_subl" = 0, #1 inhibit
+  "inhibit_bs" = 1 , #1 inhibit
+  "inhibit_subl" = 1, #1 inhibit
   " distrib "  = 1, #default 0
   "fetch" = 1000,
   "N_S " = 1,
@@ -157,7 +156,7 @@ par_name_value = list(
   "max_z_s_0" = 0.1,
   "rain_soil_snow" = 0,# 1 Maria in some HRUs
   "relative_hts" = 0,
-  "T_g_or_G_flux" = 1, #0:Tg, 1:G_flux
+  "T_g_or_G_flux" = 0, #0:Tg, 1:G_flux
   "z_0"= 0.001,
   "z_g" = 0.1,
   "z_T" = 2,

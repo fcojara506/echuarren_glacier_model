@@ -75,4 +75,6 @@ sapply(variables, function(x) export_obs(variable_modulo = x,
 variables = c("glacier_Albedo","glacier_Surf","ice","firn")
 sapply(variables, function(x) export_obs(variable_modulo = x,
                                          modulo = "glacier"))
-
+variables = c("ice")
+sapply(variables, function(x) export_obs(variable_modulo = x,
+                                         modulo = "glacier"))

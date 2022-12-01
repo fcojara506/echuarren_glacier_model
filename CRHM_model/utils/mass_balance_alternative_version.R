@@ -43,32 +43,43 @@ date_YM <- function(df) {
 basin_df = read.csv2(file = "basin_data/HRU_basin_properties.csv")[,c("HRU","area_km2")]
 
 
+date_range = c(as.Date("2016-04-02"),
+               as.Date("2022-11-01"))
+df_filename = "CRHM_model_output/balance_masa.txt"
+df = readOutputFile(df_filename,timezone = "etc/GMT+4") %>%
+  data.frame() #%>%
+  #subset(datetime %between% date_range)
 
-df_filename = "CRHM_output_2.txt"
-df = readOutputFile(df_filename,timezone = "etc/GMT+4")
 df_units =CRHMr::readOutputUnits(df_filename)
 
-flujos_hru_index = c("hru_rain","hru_snow","hru_actet","hru_subl","intcp_evap","Subl_Cpy","E_s_int") %>% list_index
-almacen_hru_index = c("firn","ice","gw","soil_moist","Sd") %>% list_index
+flujos_hru_index = c("hru_rain","hru_snow","hru_actet","hru_subl","intcp_evap","E_s_int","hru_drift","Subl_Cpy") %>% list_index
+almacen_hru_index = c("firn","ice","gw","soil_moist","Sd","SWE") %>% list_index
 caudales_cuenca_index = c("basinflow","basingw")%>% list_index
-snowloss_cuenca_index = c("BasinSnowLoss")%>% list_index
+#snowloss_cuenca_index = c("BasinSnowLoss")%>% list_index
 
 ##### from HRU to URH
 ## mm/int
 cuenca_flujos = df[,c(1,flujos_hru_index)] %>% 
   sep_col %>% 
-  areal_avg %>% 
-  #date_YM %>% 
-  group_by(var) %>% 
+  # group_by(HRU,var) %>% 
+  # summarise(var_total=sum(value)) %>% 
+  # dcast(formula = HRU~var,value.var = "var_total")
+
+  #date_YM %>%
+  group_by(var) %>%
   summarise(var_total=sum(var_hour))
 
 ## mm
 cuenca_almacen = df[,c(1,almacen_hru_index)]%>%
   sep_col %>%
-  areal_avg%>% 
-  #date_YM%>% 
-  group_by(var) %>% 
-  summarise(var_total=first(var_hour)-last(var_hour))
+  # group_by(HRU,var) %>% 
+  # summarise(var_total=first(value)-last(value)) %>% 
+  # dcast(formula = HRU~var,value.var = "var_total")
+  # 
+areal_avg%>%
+#date_YM%>%
+group_by(var) %>%
+summarise(var_total=first(var_hour)-last(var_hour))
 
 ## m3/int to mm/int
 cuenca_caudales = df[,c(1,caudales_cuenca_index)]%>%
@@ -79,23 +90,41 @@ cuenca_caudales = df[,c(1,caudales_cuenca_index)]%>%
   group_by(var) %>% 
   summarise(var_total=sum(var_hour))
 
-## mm/int
-cuenca_snowloss = df[,c(1,snowloss_cuenca_index)] %>%
-  sep_col%>% 
-  #date_YM %>% 
-  select(-HRU) %>% 
-  rename(var_hour = value)%>% 
-  group_by(var) %>% 
-  summarise(var_total=sum(var_hour))
 
-var_in= c("hru_rain","hru_snow","firn","gw","ice","Sd","soil_moist")
+cuenca_other = df[,c(1,c("snowmelt_int",
+                         "melt_direct_int",
+                         "h2o_total",
+                         "net_snow",
+                         "net_rain",
+                         "E_s_int",
+                         #" E_s_0 ",
+                         #"E_s_l",
+                         "E_s_0_int",
+                         "E_s_l_int") %>% list_index())] %>% 
+  sep_col %>% 
+  areal_avg() %>%
+  group_by(var) %>%
+  summarise(var_total=sum(var_hour))
+  # group_by(HRU,var) %>%
+  # summarise(var_total=sum(value)) %>%
+  # dcast(formula = HRU~var,value.var = "var_total")
+
+
+cuenca_sum = df[,c(1,c("sum") %>% list_index())] %>% 
+  sep_col %>% 
+  areal_avg() %>% 
+  group_by(var) %>% 
+  summarise(var_total=first(var_hour)-last(var_hour))
+
+var_in= c("hru_rain","hru_snow","firn","gw","ice","Sd","soil_moist","SWE")
 
 df2 = rbind(cuenca_almacen,
             cuenca_caudales,
-            cuenca_flujos,
-            cuenca_snowloss) %>% 
+            cuenca_flujos
+            #cuenca_snowloss
+            ) %>% 
   mutate(in_or_out = ifelse(var %in% var_in, "in","out")) %>% 
-  mutate(var_total = ifelse(var %in% c("E_s_int"), -var_total,var_total))
+  mutate(var_total = ifelse(var %in% c("E_s_int","hru_drift"), -var_total,var_total))
 
 
 df_inout = df2 %>%

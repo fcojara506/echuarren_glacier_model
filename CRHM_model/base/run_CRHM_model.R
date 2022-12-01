@@ -57,7 +57,7 @@ output_filename = "output.txt") {
             outFile = paste0("CRHM_model_output/",output_filename)
             )
 file.remove("CRHMr.log")
-file.remove("crhmRun.log")
+#file.remove("crhmRun.log")
 return(T)
 }
 
