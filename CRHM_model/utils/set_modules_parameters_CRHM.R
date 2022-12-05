@@ -48,8 +48,8 @@ par_name_value = list(
   ##---------------------------------------------------------------
   ##                              obs                             -
   ##---------------------------------------------------------------
-  "tmax_allsnow" = 3.4, #default 0
-  "tmax_allrain" = 4.5,#default 4
+  "tmax_allsnow" = 0, #default 0 3.4
+  "tmax_allrain" = 4.5,#default 4 /4.5
   "lapse_rate" = 0, #temperature, 0: already defined through obs
   "ClimChng_precip" = 1, #default 1 #########
   "ClimChng_t" = 0,#default 0 ##########
@@ -89,7 +89,7 @@ par_name_value = list(
   "evap_type" = 0,# 0:Granger, 1:Priestley-Taylor, 2:Penman-Monteith
   "F_Qg" = 0.1,#default 0.1,
   "Zwind" = 2.5,
-  "inhibit_evap"=1,#0
+  "inhibit_evap"= 0,#0
   ##----------------------------------------------------------------
   ##                            SWESlope                           -
   ##----------------------------------------------------------------
@@ -104,8 +104,8 @@ par_name_value = list(
   " Densification_550 " = 100,
   " Densification_above_550 " = 100,
   "firnLag" = 0,
-  "inhibit_firnmelt" = 1, #default 0
-  "inhibit_icenmelt" = 1, #default 0
+  "inhibit_firnmelt" = 0, #default 0
+  "inhibit_icenmelt" = 0, #default 0
   "nfactor" = 0,
   "SWELag" = 0,
   "SWEstorage" = 0,
@@ -131,20 +131,20 @@ par_name_value = list(
   ##----------------------------------------------------------------
   "a1" = 1.08E7,#default 1.08E7, 1.2E6
   "a2" = 7.2E5,#7.2E5
-  "Albedo_Bare" = 0.3,#0.17,
-  "Albedo_Snow" = 0.92,
-  "amax" = 0.92,
-  "amin" = 0.6,
+  "Albedo_Bare" = 0.17,#0.17,
+  "Albedo_Snow" = 0.85,
+  "amax" = 0.9,
+  "amin" = 0.5,
   "smin" = 1,
   ##----------------------------------------------------------------
   ##                          pbsmSnobal                           -
   ##----------------------------------------------------------------
   "A_S" = 0.003,
-  "inhibit_bs" = 1 , #1 inhibit
-  "inhibit_subl" = 1, #1 inhibit
+  "inhibit_bs" = 0 , #1 inhibit
+  "inhibit_subl" = 0, #1 inhibit
   " distrib "  = 1, #default 0
   "fetch" = 1000,
-  "N_S " = 1,
+  #"N_S " = 0,
   ##----------------------------------------------------------------
   ##                          SnobalCRHM                           -
   ##----------------------------------------------------------------
@@ -156,7 +156,7 @@ par_name_value = list(
   "max_z_s_0" = 0.1,
   "rain_soil_snow" = 0,# 1 Maria in some HRUs
   "relative_hts" = 0,
-  "T_g_or_G_flux" = 0, #0:Tg, 1:G_flux
+  "T_g_or_G_flux" = 1, #0:Tg, 1:G_flux
   "z_0"= 0.001,
   "z_g" = 0.1,
   "z_T" = 2,
@@ -165,20 +165,20 @@ par_name_value = list(
   ##                      PrairieInfiltration                     -
   ##---------------------------------------------------------------
   "fallstat"=50,
-  "groundcover" = 1,#1:baresoil
+  #"groundcover" = 1,#1:baresoil
   "infDays" = 6,
   "Major" = 5, #threshold for major melt (mm/d)
   "PriorInfiltration"=1,
-  "texture" = 4, ##########3 revisar
+  #"texture" = 4, ##########3 revisar
   ##----------------------------------------------------------------
   ##                              Soil                             -
   ##----------------------------------------------------------------
-  "cov_type" = 0, #0: no vegetation, 1:crop, 2: grasses
-  "gw_init" = 100,
-  "gw_max" = 1000,
+  #"cov_type" = 0, #0: no vegetation, 1:crop, 2: grasses
+  #"gw_init" = 100,
+  #"gw_max" = 1000,
   "Sdinit" = 0,
-  "soil_moist_init" = 250,
-  "soil_rechr_init" = 10,
+  #"soil_moist_init" = 250,
+  #"soil_rechr_init" = 10,
   "soil_ssr_runoff" = 1,
   "soil_withdrawal" = 3,
   "Wetlands_scaling_factor" = 1,
@@ -186,7 +186,6 @@ par_name_value = list(
   ##                          Netroute_M                           -
   ##----------------------------------------------------------------
   "Channel_shp" = 1,
-  "gwKstorage"= 100,# 0 days
   "gwLag" = 0,
   " Lag " = 0,
   "preferential_flow" = 0,

@@ -101,7 +101,7 @@ ls_2022 =
   hourly_data(date_range = 
     c(as.Date("2022-08-01"),
       as.Date("2022-10-31")
-  )) %>% rbindlist()
+  )) %>% rbindlist() 
 
 library(ggplot2)
 p=ggplot(data = ls_2022,

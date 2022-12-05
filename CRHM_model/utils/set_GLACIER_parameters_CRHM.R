@@ -54,21 +54,21 @@ par_name_value = list(
 ##---------------------------------------------------------------
 ##                            glacier                           -
 ##---------------------------------------------------------------
-"Elev_Adj_glacier_surf" = c(0,1,1),
+"Elev_Adj_glacier_surf" = c(1,1,1),
 "firnstorage" = c(0,0.5,0.5),
-"firn_Albedo" = c(0.75,0.6,0.6), # Maria 0.75 white
-"firn_dens_init" = c(0,450,450),
+"firn_Albedo" = c(0,0.4,0.4), # Maria 0.75 white
+"firn_dens_init" = c(450,450,450),
 "firn_h_init" = c(0,0,0),
 "inhibit_firnmelt" = c(0,0,0),
 "inhibit_icenmelt" = c(0,0,0),
 "iceLag" = c(0,0,0),
-"icestorage" = c(0,3,4), #Maria 2.2, 3.9 default 0.1
-"ice_Albedo" = c(0,0.92,0.2),
-"ice_dens" = c(950,950,950),
+"icestorage" = c(0,0.1,0.1), #Maria 2.2, 3.9 default 0.1
+"ice_Albedo" = c(0,0.3,0.3),
+"ice_dens" = c(1000,950,950),
 "SWEAA" = c(0.3,0.5,0.5),
 "TKMA" = c(5,-1,-1),
 "use_debris" = c(0,0,1),
-"debris_h" = c(0,0,0.4),
+"debris_h" = c(0,0,0.2),
 "ice_init" = c(0,0,0)
 )
 
@@ -95,13 +95,13 @@ for (parameter in names(par_name_value)) {
   )
   
 }
-# 
-# ######### ice init in mm #################
-# IceInit_HRU = read.csv2(
-#   file = "basin_data/info_glaciares_echaurren_HRU.csv",
-#   sep = ",") %>% arrange(HRU)
-# 
-# CRHMr::setPrjParameters(inputPrjFile = prj_filename_in,
-#                         paramName = "ice_init",
-#                         paramVals = IceInit_HRU$IceInit_mm,
-#                         quiet = F)
+
+######### ice init in mm #################
+IceInit_HRU = read.csv2(
+  file = "basin_data/info_glaciares_echaurren_HRU.csv",
+  sep = ",") %>% arrange(HRU)
+
+CRHMr::setPrjParameters(inputPrjFile = prj_filename_in,
+                        paramName = "ice_init",
+                        paramVals = IceInit_HRU$IceInit_mm,
+                        quiet = F)
