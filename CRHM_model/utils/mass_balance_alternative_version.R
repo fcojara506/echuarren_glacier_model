@@ -23,7 +23,7 @@ almacen_hru_index = c(
   "gw[.]","soil_moist","Sd[.]","SWE") %>% list_index()# %>% unlist
 caudales_cuenca_index = c("basinflow","basingw")%>% list_index
 
-##### from HRU to URH
+##### from HRU to basin
 ## mm/int
 cuenca_flujos = df[,c(1,flujos_hru_index)] %>% 
   sep_col %>%
