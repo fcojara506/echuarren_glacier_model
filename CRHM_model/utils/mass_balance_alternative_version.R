@@ -7,8 +7,8 @@ rm(list = ls())
 source("base/mass_balance.R")
 basin_df = read.csv2(file = "basin_data/HRU_basin_properties.csv")[,c("HRU","area_km2")]
 
-
-date_range = c(as.Date("2016-04-01"),
+tag = "WY2022"
+date_range = c(as.Date("2022-04-01"),
                as.Date("2022-11-01"))
 df_filename = "CRHM_model_output/balance_masa.txt"
 df = readOutputFile(df_filename,timezone = "etc/GMT+4") %>%
@@ -94,11 +94,12 @@ df2 = rbind(cuenca_almacen,
 df_inout = df2 %>%
   group_by(in_or_out) %>% 
   summarise(var_sum = sum(var_total))
-  
+
+
 write.csv(x = df2,
-          file = "CRHM_model_output/balance_de_masa_total.csv",
+          file = paste0("CRHM_model_output/balance_de_masa_total",tag,".csv"),
           row.names = F)
 
-message(df2)
+
 
 

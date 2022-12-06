@@ -46,11 +46,11 @@ obs_filenames =
     full.names = T)
 
 y_labels = list(
-  "obs_hru_p" = "Precipitación (mm/h)",
-  "obs_hru_rain" = "Precipitación líquida (mm/h)",
-  "obs_hru_snow" = "Precipitación sólida (mm/h)",
+  "obs_hru_p" = "Precipitación (mm)",
+  "obs_hru_rain" = "Precipitación líquida (mm)",
+  "obs_hru_snow" = "Precipitación sólida (mm)",
   "obs_hru_rh" = "Humedad relativa (%)",
-  "obs_hru_t" = "Temperatura de aire 2m (°C/h)",
+  "obs_hru_t" = "Temperatura de aire 2m (°C)",
   "obs_hru_u" = "Velocidad del viento (m/s)",
   "albedo_Richard_Albedo" = "Albedo (-)",
   "albedo_Richard_Albedo" = "Albedo (-)",
@@ -66,7 +66,7 @@ y_labels = list(
   "SnobalCRHM_H" = "Calor sensible (W/m2)",
   "SnobalCRHM_L_v_E" = "Calor Latente (W/m2)",
   "SnobalCRHM_R_n" = "Radiación neta (W/m2)",
-  "SnobalCRHM_snowmelt_int" = "Derretimiento nieve (mm/h)"
+  "SnobalCRHM_snowmelt_int" = "Derretimiento nieve (mm)"
 )
 
 for (filename in obs_filenames) {

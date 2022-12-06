@@ -1,0 +1,13 @@
+var,var_name
+gw,Cambio en agua subterránea
+ice,Cambio en el volumen de hielo en E.A
+soil_moist,Cambio en humedad del suelo
+SWE,Manto nieve en E.A
+basinflow,Flujo de agua superficial
+basingw,Flujo de agua subterranea
+E_s_int,Sublimación estática
+hru_actet,Evaporación real
+hru_drift,Transporte por viento
+hru_rain,Precipitación líquida
+hru_snow,Precipitación sólida
+hru_subl,Sublimación por viento

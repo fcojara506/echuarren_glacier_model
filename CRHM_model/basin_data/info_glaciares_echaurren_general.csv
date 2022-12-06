@@ -1,7 +1,7 @@
-id_glaciar_DGA,Clasificación,Area_km2,EA_km3,IceInit_km,IceInit_mm,fecha,Nombre
-CL105703009,Glaciar Rocoso,5.38E-02,2.97E-04,5.53E-03,5.53E+04,2018/04/01,SN
-CL105703105,Glaciar Rocoso,1.67E-01,1.38E-03,8.27E-03,8.27E+04,2018/04/01,SN
+id_glaciar_DGA,Clasificacion,Area_km2,EA_km3,IceInit_km,IceInit_mm,fecha,Nombre
+CL105703009,Glaciar Rocoso,5.38E-02,2.97E-04,5.53E-03,5.53E+04,01-04-18,SN
+CL105703105,Glaciar Rocoso,1.67E-01,1.38E-03,8.27E-03,8.27E+04,01-04-18,SN
 CL105703010,Glaciarete,1.56E-01,1.94E-03,1.25E-02,1.25E+05,2022,Echaurren Norte
 CL105703011A,Glaciarete,3.94E-02,3.01E-04,7.64E-03,7.64E+04,2022,Echaurren Norte A
 CL105703011B,Glaciarete,1.51E-03,3.61E-06,2.39E-03,2.39E+04,2022,Echaurren Norte B
-CL105703153,Glaciar Rocoso,6.46E-02,3.81E-04,5.90E-03,5.90E+04,2018/04/01,SN
+CL105703153,Glaciar Rocoso,6.46E-02,3.81E-04,5.90E-03,5.90E+04,01-04-18,SN

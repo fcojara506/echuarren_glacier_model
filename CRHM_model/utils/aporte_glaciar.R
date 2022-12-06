@@ -1,65 +1,68 @@
 rm(list = ls())
+library(CRHMr)
 library(dplyr)
 library(data.table)
+source("base/mass_balance.R")
 # basin properties
 basin_df = read.csv2(file = "basin_data/HRU_basin_properties.csv")
 basin_area = sum(basin_df$area_km2)
+df_filename = "CRHM_model_output/balance_masa.txt"
+df_units = CRHMr::readOutputUnits(df_filename)
 
-area_avg <- function(df,
-                     date_range = c(
-                       as.Date("2016-04-02"),
-                       as.Date("2022-10-31")
-                         ),
-                     fx = mean
-                     ) {
-  df = df %>% 
-  mutate(HRU = as.integer(HRU)) %>% 
-    merge(basin_df,by = "HRU") %>% 
-    select(c(datetime,var,value,area_km2)) %>% 
-    subset(datetime %between% date_range) %>% 
-    mutate(var_avg = value * area_km2/basin_area) %>% 
-    select(-value,-area_km2) %>% 
-    group_by(var,datetime) %>% 
-    summarize(var_sum = fx(var_avg)) %>% 
-    select(datetime, var, var_sum)
-  return(df)
-}
+df = readOutputFile(df_filename,timezone = "etc/GMT+4") %>%
+  data.frame() 
+
+df = df[,c(1,c("hru_rain","snowmelt_int","icemelt") %>% list_index)] %>% 
+  sep_col %>%
+  areal_avg%>%
+  group_by(datetime,var) %>%
+  summarise(var_sum=sum(var_hour)) %>% 
+  mutate(date = as.Date(datetime)) %>% 
+  select(date,var,var_sum) %>% 
+  group_by(var,date)
+
+df_daily_1 = df %>%
+  subset(var %in% c("hru_rain","snowmelt_int")) %>% 
+  summarize(var_daily= sum(var_sum))
+
+df_daily_2 = df %>%
+  subset(var %in% c("icemelt")) %>% 
+  summarize(var_daily= mean(var_sum))
+
+df_daily = rbind(df_daily_1,df_daily_2) %>% 
+  rename(datetime = date) 
+
 
 by_YM <- function(df) {
+  library(lubridate)
   df = df %>% 
   mutate(date = as.Date(format(datetime,"%Y-%m-01"))) %>%
     group_by(var,date) %>% 
-    summarize(var_sum = mean(var_sum))
+    summarize(var_sum = mean(var_daily))
   return(df)
 }
 
 by_month <- function(df) {
+  library(lubridate)
   df = df %>% 
     mutate(date = month(datetime)) %>%
     group_by(var,date) %>% 
-    summarize(var_sum = mean(var_sum))
+    summarize(var_sum = mean(var_daily))
   return(df)
 }
 
 
-plot_aporte_glaciar <- function(date_range = c(as.Date("2016-04-02"),as.Date("2022-10-31")),
+plot_aporte_glaciar <- function(date_range = c(as.Date("2022-04-01"),as.Date("2022-10-31")),
                                 by_group,
                                 tag_name
 ) {
-  
-  # aporte glaciar
-  df = list(
-    "p_liquida" = readRDS("CRHM_model_output/archivos/obs_hru_rain.RDS") %>% area_avg(fx=sum,date_range = date_range),
-    "snowmelt" = readRDS("CRHM_model_output/archivos/SnobalCRHM_snowmeltD.RDS")%>% area_avg(date_range = date_range),
-    "icemelt" = readRDS("CRHM_model_output/archivos/glacier_icemelt.RDS")%>% area_avg(date_range = date_range)
-    #"firnmelt" = readRDS("CRHM_model_output/archivos/glacier_firnmelt.RDS")%>% area_avg()
-  ) %>% rbindlist()
-  
 
-df1 = df %>% 
-  by_group %>%
-  reshape2::dcast(formula = date ~ var,
-                  value.var = "var_sum" )
+  
+df1 = df_daily %>%
+  subset(datetime %between% date_range) %>% 
+  by_group %>% 
+  reshape2::dcast(formula = date ~ var, value.var = "var_sum" )
+  
 cols = names(df1)[-1]
 
 df_norm= cbind(date=df1$date,
@@ -70,11 +73,12 @@ df_norm$variable = as.factor(df_norm$variable)
 levels(df_norm$variable) = c("Pp Líquida","Hielo","Nieve")
 
 
+meses <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
+df_norm$date <- as.factor(df_norm$date)
+print(levels(df_norm$date))
+levels(df_norm$date) = meses[unique(levels(df_norm$date))]
 
-df_norm$date <- factor(df_norm$date,
-                       levels=as.character(seq(1,12)))
-
-
+library(ggplot2)
 p2=ggplot(data = df_norm,
           aes(x = date,
               y = value,
@@ -92,7 +96,7 @@ p2=ggplot(data = df_norm,
   )+
   theme(legend.position = "bottom")
 
-
+plot(p2)
 ggsave(filename = paste0("CRHM_model_output/figuras/Aporte_glaciar",tag_name,".png"),
        plot = p2,
        width = 6,
@@ -101,23 +105,28 @@ ggsave(filename = paste0("CRHM_model_output/figuras/Aporte_glaciar",tag_name,".p
 return(df_norm)
 }
 ###### by month
-df1=plot_aporte_glaciar(date_range = c(as.Date("2016-04-02"),
+# date_range = c(as.Date("2016-04-01"),as.Date("2022-10-31"))
+# by_group = by_month
+# tag_name = "2016_2022_mon"
+df1=plot_aporte_glaciar(date_range = c(as.Date("2016-04-01"),
                                    as.Date("2022-10-31")),
                     by_group = by_month,
                     tag_name = "2016_2022_mon")
 
-df2=plot_aporte_glaciar(date_range = c(as.Date("2022-08-01"),
+df2=plot_aporte_glaciar(date_range = c(as.Date("2022-04-01"),
                                    as.Date("2022-10-31")),
                     by_group = by_month,
-                    tag_name = "ASO2022_mon")
-#### by Y-M
-
-df3=plot_aporte_glaciar(date_range = c(as.Date("2016-04-02"),
-                                   as.Date("2022-10-31")),
-                    by_group = by_YM,
-                    tag_name = "2016_2022_YM")
-
-df4=plot_aporte_glaciar(date_range = c(as.Date("2022-08-01"),
-                                   as.Date("2022-10-31")),
-                    by_group = by_YM,
-                    tag_name = "ASO2022_YM")
+                    tag_name = "WY2022_mon")
+# #### by Y-M
+# 
+# df3=plot_aporte_glaciar(date_range = c(as.Date("2016-04-02"),
+#                                    as.Date("2022-10-31")),
+#                     by_group = by_YM,
+#                     tag_name = "2016_2022_YM")
+# 
+# df4=plot_aporte_glaciar(date_range = c(as.Date("2022-08-01"),
+#                                    as.Date("2022-10-31")),
+#                     by_group = by_YM,
+#                     tag_name = "ASO2022_YM")
+# 
+a=df2 %>% reshape2::acast(date ~ variable,value.var = "value") %>% round(1)
