@@ -76,7 +76,7 @@ levels(df_norm$variable) = c("Pp Líquida","Hielo","Nieve")
 meses <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
 df_norm$date <- as.factor(df_norm$date)
 print(levels(df_norm$date))
-levels(df_norm$date) = meses[unique(levels(df_norm$date))]
+levels(df_norm$date) = meses[as.numeric(levels(df_norm$date))]
 
 library(ggplot2)
 p2=ggplot(data = df_norm,
@@ -117,16 +117,5 @@ df2=plot_aporte_glaciar(date_range = c(as.Date("2022-04-01"),
                                    as.Date("2022-10-31")),
                     by_group = by_month,
                     tag_name = "WY2022_mon")
-# #### by Y-M
-# 
-# df3=plot_aporte_glaciar(date_range = c(as.Date("2016-04-02"),
-#                                    as.Date("2022-10-31")),
-#                     by_group = by_YM,
-#                     tag_name = "2016_2022_YM")
-# 
-# df4=plot_aporte_glaciar(date_range = c(as.Date("2022-08-01"),
-#                                    as.Date("2022-10-31")),
-#                     by_group = by_YM,
-#                     tag_name = "ASO2022_YM")
-# 
-a=df2 %>% reshape2::acast(date ~ variable,value.var = "value") %>% round(1)
+a=df2 %>% reshape2::acast(date ~ variable,value.var = "value") %>% round(1) 
+b=df2 %>% reshape2::acast(date ~ variable,value.var = "value") %>% round(1)
