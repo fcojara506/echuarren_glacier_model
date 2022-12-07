@@ -1,10 +1,7 @@
 rm(list = ls())
 library(dplyr)
-setwd("/Users/fco/Documents/GitHub/echuarren_glacier_model/CRHM_model")
+
 source("base/run_CRHM_model.R")
-
-
-
 
 export_obs <- function(variable_modulo,modulo = "obs") {
   
