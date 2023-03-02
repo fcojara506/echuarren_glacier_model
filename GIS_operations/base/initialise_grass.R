@@ -2,7 +2,7 @@
 
 initialise_grass <- function(location = "GRASS_GLACIAR_ECHAURREN",
                              mapset = "PERMANENT",
-                             gisDbase = paste0(getwd(), "/GRASS_DB"),
+                             gisDbase = paste0(getwd(), "/GRASS_DB/"),
                              home = getwd(),
                              gisBase = "/Applications/GRASS-8.2.app/Contents/Resources",
                              empty_mapset = TRUE

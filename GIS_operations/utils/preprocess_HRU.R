@@ -1,11 +1,12 @@
 rm(list = ls())
 library(rgrass)
 
+setwd(rprojroot::find_rstudio_root_file())
 #load local functions
 source("base/initialise_grass.R")
 source("base/define_region_extension.R")
 source("base/dem_operations.R")
-source("base/import_landcover.R")
+#source("base/import_landcover.R")
 source("base/create_hru.R")
 source("base/raster_functions.R")
 source("base/export.R")
@@ -61,8 +62,8 @@ aspect_to_categories(input = "aspect_degreeN",
                      output = "bandas_orientacion",
                      rules_path = "GIS/rules_aspect_categories")
 #import landcover raster
-import_landcover(input_path_landcover = "GIS/LandCover CHILE 2014/LC_CHILE_2014_b.tif",
-                 output_name = "landcover")
+#import_landcover(input_path_landcover = "GIS/LandCover CHILE 2014/LC_CHILE_2014_b.tif",
+#                 output_name = "landcover")
 
 # #import glacier vector to raster
 # import_glaciers(input_path_glaciers = "GIS/IPG2022_v1/IPG_2022_v1.shp",

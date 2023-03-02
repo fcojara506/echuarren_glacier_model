@@ -20,7 +20,16 @@ The workflow includes the following steps:
 14. Calculate statistics per HRU
 
 
-The following software and packages are required to run the workflow:GRASS GIS (version 7 or higher)R (version 3.5 or higher)rgrass7 packageUsageClone the repository or download the files.Open R and set the working directory to the root of the repository.Execute the following code to load local functions:
+The following software and packages are required to run the workflow:
++GRASS GIS (version 8.2 or higher)
++R (version 3.5 or higher)
++rgrass7 package (https://grasswiki.osgeo.org/wiki/R_statistics/rgrass)
+
+If necessary, set the environment variables correctly. if only RStudio won't work (R works from GRASS terminal, and rgrass work for rscript in terminal/cmd), try copying the env variables after the printenv command on the GRASS terminal, paste into .Renviron file using usethis::edit_r_environ().
+
+Usage Clone the repository or download the files.
+Open R and set the working directory to the root of the repository.
+Execute the following code to load local functions:
 
 
 Requirements

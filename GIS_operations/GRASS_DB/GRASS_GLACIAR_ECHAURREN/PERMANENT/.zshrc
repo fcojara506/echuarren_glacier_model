@@ -1,4 +1,4 @@
-test -r /Users/fco/.alias && source /Users/fco/.alias
+test -r /Users/Francisco/.alias && source /Users/Francisco/.alias
 setopt PROMPT_SUBST
 PS1='GRASS : %1~ > '
 grass_prompt() {
@@ -26,6 +26,6 @@ grass_prompt() {
 PROMPT_COMMAND=grass_prompt
 precmd() { eval "$PROMPT_COMMAND" }
 RPROMPT='${ZLOC}'
-export HOME="/Users/fco"
-export PATH="/Applications/GRASS-8.2.app/Contents/Resources/bin:/Applications/GRASS-8.2.app/Contents/Resources/scripts:/Users/fco/Library/GRASS/8.2/Addons/bin:/Users/fco/Library/GRASS/8.2/Addons/scripts:/opt/homebrew/bin:/opt/anaconda3/bin:/opt/anaconda3/condabin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export HOME="/Users/Francisco"
+export PATH="/Applications/GRASS-8.2.app/Contents/Resources/bin:/Applications/GRASS-8.2.app/Contents/Resources/scripts:/Users/Francisco/Library/GRASS/8.2/Addons/bin:/Users/Francisco/Library/GRASS/8.2/Addons/scripts:/Users/Francisco/opt/anaconda3/bin:/Users/Francisco/opt/anaconda3/condabin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 trap "exit" TERM
