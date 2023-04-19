@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 .DS_Store
+GIS_operations/.grassrc7
+GIS_operations/.grassrc8
+GIS_operations/.Renviron
